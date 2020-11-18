@@ -1,5 +1,4 @@
-<img src="https://github.com/kmherman/BioME/blob/main/doc/Biomelogo.png" width="200" />
-Supervised Machine Learning for Microbiome Data
+<img src="https://github.com/kmherman/BioME/blob/main/doc/Biomelogo.png" width="200" /> __Supervised Machine Learning for Microbiome Data__
 =======================================================================
 
 
