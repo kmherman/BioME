@@ -1,4 +1,5 @@
-![BioME logo](https://github.com/kmherman/BioME/blob/main/doc/Biomelogo.png): Supervised Machine Learning for Microbiome Data
+![BioME logo](https://github.com/kmherman/BioME/blob/main/doc/Biomelogo.png){:height="50%" width="50%"}
+Supervised Machine Learning for Microbiome Data
 =======================================================================
 
 
