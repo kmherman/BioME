@@ -1,4 +1,4 @@
-![BioME logo](/Biome logo.png): Supervised Machine Learning for Microbiome Data
+![BioME logo](doc/Biome logo.png): Supervised Machine Learning for Microbiome Data
 =======================================================================
 
 
