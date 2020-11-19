@@ -5,7 +5,7 @@
 BACKGROUND
 ----------
 ##### _**The problem being addressed**_
-Once thought only to be pathogenic, the microorganisms living on and within an animal host (collectively known as the microbiome) are now recognized as playing critical roles in host health [[1]](#1). For example, symbiotic microorganisms found in the gastrointestinal tract, which constitute the gut microbiome, contribute to nutrient uptake [[2]](#2) and immune system maintenance [[3]](#3) that impact the host’s fitness across its lifespan. Factors that shape gut microbial communities are multifaceted and include the host’s diet [[4]](#4) and lifestage [[5]](#5). While microbial shifts have been implicated in numerous human ailments (e.g., obesity, anxiety, inflammatory bowel disease) [[6-8]](#6-8), research has thus far been limited to differentiating microbial communities between groups and less for predictive uses. Therefore, the ability for researchers and medical staff alike to be able to predict a sample's particular status based on microbial composition could further advance our understanding of host-microbiome interactions. Further, as a result of an ever expanding microbiome data availability, microbiome research lends itself to advancement with supervised machine learning [[9]](#9). With the use of supervised machine learning tools such as BioME, models trained on a dataset of samples with known labels, can be used to predict the labels of unknown samples which could be of praticular use in areas such as predicting of disease/susceptibility, sample collection site or even species from which the sample came from [[10]](#10). However, the implementation of machine learning in microbiome research might feel daunting and time consuming to those outside of the realm of data science. Further, determining which machine learning algrothisms to use can also be difficult.
+Once thought only to be pathogenic, the microorganisms living on and within an animal host (collectively known as the microbiome) are now recognized as playing critical roles in host health [[1]](#1). For example, symbiotic microorganisms found in the gastrointestinal tract, which constitute the gut microbiome, contribute to nutrient uptake [[2]](#2) and immune system maintenance [[3]](#3) that impact the host’s fitness across its lifespan. Factors that shape gut microbial communities are multifaceted and include the host’s diet [[4]](#4) and lifestage [[5]](#5). While microbial shifts have been implicated in numerous human ailments (e.g., obesity, anxiety, inflammatory bowel disease) [[6-8]](#6-8), research has thus far been limited to differentiating microbial communities between groups and less for predictive uses. Therefore, the ability for researchers and medical staff alike to be able to predict a sample's particular status based on microbial composition could further advance our understanding of host-microbiome interactions. Further, as a result of an ever expanding microbiome data availability, microbiome research lends itself to advancement with supervised machine learning [[9]](#9). With the use of supervised machine learning tools such as BioME, models trained on a dataset of samples with known labels, can be used to predict the labels of unknown samples which could be of praticular use in areas such as predicting of disease/susceptibility, sample collection site or even species from which the sample came from [[10]](#10). However, the implementation of machine learning in microbiome research might feel daunting and time consuming to those outside of the realm of data science. Further, determining which machine learning algorithms to use can also be difficult.
 To address these challenges, we developed a tool that implements and compares the performance of:
 * K-Nearest Neighbor
 * Neural Network
@@ -15,7 +15,7 @@ To address these challenges, we developed a tool that implements and compares th
 * Decision Tree
 * Random Forest
 
-algrothisms to perform feature selection on microbiome data and provide the most accurate model for non-data science researchers to utilize for predicting sample characteristics based on on 16S rRNA microbiome composition data. Here, we applied the tool to analyze fecal microbiome (16S rRNA gene profiles) data collected from healthy humans **(HC)** and individuals with either Crohn's disease **(CD)**, Ulcerative colitis **(UC)**, or Ileal Crohn's diease **(IC)** [[11-13]](#11-13) to display the tools capabilities.
+algorithms to perform feature selection on microbiome data and provide the most accurate model for non-data science researchers to utilize for predicting sample characteristics based on on 16S rRNA microbiome composition data. Here, we applied the tool to analyze fecal microbiome (16S rRNA gene profiles) data collected from healthy humans **(HC)** and individuals with either Crohn's disease **(CD)**, Ulcerative colitis **(UC)**, or Ileal Crohn's diease **(IC)** [[11-13]](#11-13) to display the tools capabilities.
 
 
 
@@ -68,6 +68,17 @@ The Ecologist (*after making sure there were no other options outside of using P
 
 (**a**) The **Ecologist** is interested in seeing if habitat quality can be predicted based on fecal microbiome community composition in American marten (*Martes americana*). They have several hundred samples from marten living in primary undisturbed habitat and from marten from logging sites and heavy deforestation. They were lucky enough to collect even more samples from harvested marten, but don't know their habitat status. They want to determine if they can classify individuals from primary or disturbed habitat as this could be a powerful tool for conservation and management monitoring!
 (**b**) The **Ecologist** will now take the data and results and proceed to go back to R to make all visualizations and any post-hoc tests.
+
+COMPONENT SPECIFICATION
+##### _**What are the components in the use cases? What components are already available?**_
+
+###### User Input and Data Cleaning Module
+**Function:** The user input module prompts the user to enter a data set and cleans and formats the data set.
+**Inputs** A data set from the user, entered as an array.
+**Outputs** A clean dataset as an array.
+**Use Case** A researcher wants to quickly process a large data set. A clinician with little experience in computation wants to understand patient data.
+
+
 
 REFERENCES
 ----------
