@@ -69,16 +69,6 @@ The Ecologist (*after making sure there were no other options outside of using P
 (**a**) The **Ecologist** is interested in seeing if habitat quality can be predicted based on fecal microbiome community composition in American marten (*Martes americana*). They have several hundred samples from marten living in primary undisturbed habitat and from marten from logging sites and heavy deforestation. They were lucky enough to collect even more samples from harvested marten, but don't know their habitat status. They want to determine if they can classify individuals from primary or disturbed habitat as this could be a powerful tool for conservation and management monitoring!
 (**b**) The **Ecologist** will now take the data and results and proceed to go back to R to make all visualizations and any post-hoc tests.
 
-COMPONENT SPECIFICATION
-##### _**What are the components in the use cases? What components are already available?**_
-
-###### User Input and Data Cleaning Module
-**Function:** The user input module prompts the user to enter a data set and cleans and formats the data set.
-**Inputs** A data set from the user, entered as an array.
-**Outputs** A clean dataset as an array.
-**Use Case** A researcher wants to quickly process a large data set. A clinician with little experience in computation wants to understand patient data.
-
-
 
 REFERENCES
 ----------
