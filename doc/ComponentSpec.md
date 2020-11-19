@@ -5,6 +5,8 @@ This software requires the input data to be in .txt format. There are many bioin
 
 ## Component Specification
 
+Component organization and interaction is relatively simple in BioME. With the exception of the data manager component, all components are feedforward and only need to interact with other components to feed data to other processes. There is no feedback or cross-talk between components. The data manager is the only component that communicates with the user and has a feedback loop to reprompt the data if it is incorrectly formatted.
+
 1. ### Data manager
     * <ins> Function:</ins> Reads in OTU data and metadata and returns training and testing sets split randomly (90/10).
     * Input: A .txt file containing a biome data table and metadata containing keywords for disease or disease subtypes.
@@ -14,19 +16,21 @@ This software requires the input data to be in .txt format. There are many bioin
     * <ins> Function:</ins> Feature that uses a dimensionality reduction algorithm to condense the data into fewer features (particularly useful for microbiome data which inherently is very sparse).
     * Input: .txt formatted test and train datasets.
     * Output: Condensed OTU formatted datasets for use in models.
-    * Interactions: This component simply accepts data from the data manager. As the data manager ensures that data is formatted correctly, there is no need for the data pre-processor to communicate with the manager. This  interacts with the model fitting component by returning a cleaned and condensed dataset for the model fitting component to begin training.
+    * Interactions: This component simply accepts data from the data manager. As the data manager ensures that data is formatted correctly, there is no need for the data pre-processor to communicate with the manager. This  interacts with the model fitting component by returning a cleaned and condensed dataset for the model fitting component to begin training. This component can also pass the same data to an optional feature analysis component.
 3. ### Model fitting
     * <ins> Function:</ins> Read in OTU data and uses it to train a variety of machine learning models to most accurately fit the data.
     * Input: OTU formatted test an train datasets (can be condensed by the Data pre-processor component)
-    * Interactions: This component can be considered a set of subcomponents executing machine learning algorithms in parallel (although for practical purposes, they may be executed one afer another). Each subcomponent accepts a copy of the cleaned dataset from the data pre-processor and begins training a specific machine learning model. Each subcomponent passes its fitted model and a loss function value for the model. The loss function is the same across all subcomponents to better compare them.The subcomponents never interact with each other.
+    * Interactions: This component can be considered a set of subcomponents executing machine learning algorithms in parallel (although for practical purposes, they may be executed one afer another). Each subcomponent accepts a copy of the cleaned dataset from the data pre-processor and begins training a specific machine learning model. Each subcomponent passes its fitted model and a loss function value for the model. The loss function is the same across all subcomponents to better compare them. The subcomponents never interact with each other.
 4. ### Model selector
     * <ins> Function:</ins> Trains each model (list specified by user; default: all) with the training set and calculates the accuracy using the test set. Returns the model with the highest accuracy and gives information on
     * Input: Training set, test set, list of models to test
     * Output: Trained models ordered by test accuracy
+    * Interactions: This component accepts loss function values from the various models. It selects the most accurate model based on these values, and returns the best model and loss function data to the user.
 5. ### Feature analysis
     * <ins> Function:</ins> Provides reseachers with an analysis on feature importance. This gives insight into which bacteria are more indicative of a disease or disease subtype.
     * Input: Combined train and test data set.
     * Output: Visual and quantitative output indicating relative importance of specific bacteria in predicting that given disease.
+    * Interactions: This optional component can accepts processed test and training data sets from the pre-processor component. It perfroms feature analysis and returns a report on feature importance to the user.
 
 ![image%20%282%29.png](attachment:image%20%282%29.png)
 
