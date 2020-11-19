@@ -1,17 +1,29 @@
 # Software Design Components
-1. ### Data manager.
+
+## Input Data
+This software requires the input data to be in .txt format. There are many bioinformatics platforms for pulling and consolidating bioinformatic data, any of which can be used prior to using this software. Most of these platforms will output files in OTU format, CSV, or .txt files. Some platforms bioinformatic platforms, such as QIIME (employed in the sample analysis), can output either OTU or .txt files and converting a .csv file into a .txt file will likely be trivial for BioME users.
+
+
+here are many bioinformatic pipline options to get biome data. This software is compatible with any bioinformatic platform that exports a biom csv file. This data must first be converted to a .txt file in order to use BioME.
+## Component Specification
+
+1. ### Data manager
     * <ins> Function:</ins> Reads in OTU data and metadata and returns training and testing sets split randomly (90/10).
-    * Input: Standard format OTU table and metadata containing keywords for disease or disease subtypes.
-    * Output: Randomly split test and training sets
-2. ### Data pre-processor. 
+    * Input: A .txt file containing a biome data table and metadata containing keywords for disease or disease subtypes.
+    * Output: Randomly split test and training sets as OTU tables.
+2. ### Data pre-processor
     * <ins> Function:</ins> Optional feature that uses a dimensionality reduction algorithm to condense the data into fewer features (particularly useful for microbiome data which inherently is very sparse).
-    * Input: Test and train datasets
-    * Output: Condensed datasets for use in models
-3. ### Model selector.
-    * <ins> Function:</ins> Trains each model (list specified by user; default: all) with the training set and calculates the accuracy using the test set. Returns the model with the highest accuracy and gives information on 
+    * Input: .txt formatted test and train datasets
+    * Output: Condensed OTU formatted datasets for use in models
+3. ### Model fitting
+    * <ins> Function:</ins> Read in OTU data and uses it to train a variety of machine learning models to most accurately fit the data.
+    * Input: OTU formatted test an train datasets (can be condensed by the Data pre-processor module)
+    *
+4. ### Model selector
+    * <ins> Function:</ins> Trains each model (list specified by user; default: all) with the training set and calculates the accuracy using the test set. Returns the model with the highest accuracy and gives information on
     * Input: Training set, test set, list of models to test
     * Output: Trained models ordered by test accuracy
-4. ### Feature analysis.
+5. ### Feature analysis
     * <ins> Function:</ins> Provides reseachers with an analysis on feature importance. This gives insight into which bacteria are more indicative of a disease or disease subtype.
     * Input: Combined train and test data set.
     * Output: Visual and quantitative output indicating relative importance of specific bacteria in predicting that given disease.
