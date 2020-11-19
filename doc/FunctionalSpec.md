@@ -85,21 +85,35 @@ The Ecologist (*after making sure there were no other options outside of using P
 REFERENCES
 ----------
 <a id="1">[1]</a> **The gut microbiota — masters of host development and physiology**. Sommer, F., Bäckhed, F. . Nat Rev Microbiol 11, 227–238 (2013). https://doi.org/10.1038/nrmicro2974
+
 <a id="2">[2]</a> LeBlanc JG, Milani C, de Giori GS, Sesma F, van Sinderen D, Ventura M. **Bacteria as vitamin suppliers to their host: a gut microbiota perspective**. Curr Opin Biotechnol. 2013 Apr;24(2):160-8. doi: 10.1016/j.copbio.2012.08.005. Epub 2012 Aug 30. PMID: 22940212.
+
 <a id="3">[3]</a> Hooper LV, Littman DR, Macpherson AJ. **Interactions between the microbiota and the immune system**. Science. 2012;336(6086):1268-1273. doi:10.1126/science.1223490
+
 <a id="4">[4]</a> Muegge BD, Kuczynski J, Knights D, Clemente JC, González A, Fontana L, Henrissat B, Knight R, Gordon JI. **Diet drives convergence in gut microbiome functions across mammalian phylogeny and within humans**. Science. 2011 May 20;332(6032):970-4. doi: 10.1126/science.1198719. PMID: 21596990; PMCID: PMC3303602.
+
 <a id="5">[5]</a> McKenney EA, Rodrigo A, Yoder AD (2015). **Patterns of Gut Bacterial Colonization in Three Primate Species**. PLoS ONE 10(5): e0124618.https://doi.org/10.1371/journal.pone.0124618
+
 <a id="6">[6]</a> Turnbaugh, P., Ley, R., Mahowald, M. et al. **An obesity-associated gut microbiome with increased capacity for energy harvest**. Nature 444, 1027–1031 (2006). https://doi.org/10.1038/nature05414
-<a id="7">[7]</a> Jane A. Foster, Karen-Anne McVey Neufeld. **Gut–brain axis: how the microbiome influences anxiety and depression**.2013. Trends in Neurosciences, Volume 36, Issue 5, Pages 305-312,
-ISSN 0166-2236, https://doi.org/10.1016/j.tins.2013.01.005.
+
+<a id="7">[7]</a> Jane A. Foster, Karen-Anne McVey Neufeld. **Gut–brain axis: how the microbiome influences anxiety and depression**.2013. Trends in Neurosciences, Volume 36, Issue 5, Pages 305-312, ISSN 0166-2236, https://doi.org/10.1016/j.tins.2013.01.005.
+
 <a id="8">[8]</a> Tamboli CP, Neut C, Desreumaux P, Colombel JF. **Dysbiosis in inflammatory bowel disease**. Gut. 2004;53(1):1-4. doi:10.1136/gut.53.1.1
+
 <a id="9">[9]</a> Zhou Y-H and Gallins P. (2019). **A Review and Tutorial of Machine Learning Methods for Microbiome Host Trait Prediction**. Front. Genet. 10:579. https://doi.org/10.3389/fgene.2019.00579
+
 <a id="10">[10]</a> Begüm D. Topçuoğlu, Nicholas A. Lesniak, Mack T. Ruffin IV, Jenna Wiens, Patrick D. Schloss. **A Framework for Effective Application of Machine Learning to Microbiome-Based Classification Problems**. mBio Jun 2020, 11 (3) e00434-20; DOI: 10.1128/mBio.00434-20
+
 <a id="11">[11]</a> Gevers D, Kugathasan S, Denson LA, Vázquez-Baeza Y, Van Treuren W, Ren B, Schwager E, Knights D, Song SJ, Yassour M, Morgan XC, Kostic AD, Luo C, González A, McDonald D, Haberman Y, Walters T, Baker S, Rosh J, Stephens M, Heyman M, Markowitz J, Baldassano R, Griffiths A, Sylvester F, Mack D, Kim S, Crandall W, Hyams J, Huttenhower C, Knight R, Xavier RJ.**The treatment-naive microbiome in new-onset Crohn's disease. Cell Host Microbe.**. 2014 Mar 12;15(3):382-392. doi: 10.1016/j.chom.2014.02.005. PMID: 24629344; PMCID: PMC4059512. https://pubmed.ncbi.nlm.nih.gov/24629344/
+
 <a id="12">[12]</a> Daniel McDonald, Embriette Hyde, Justine W. Debelius, James T. Morton, Antonio Gonzalez, Gail Ackermann, Alexander A. Aksenov, Bahar Behsaz, Caitriona Brennan, Yingfeng Chen, Lindsay DeRight Goldasich, Pieter C. Dorrestein, Robert R. Dunn, Ashkaan K. Fahimipour, James Gaffney, Jack A. Gilbert, Grant Gogul, Jessica L. Green, Philip Hugenholtz, Greg Humphrey, Curtis Huttenhower, Matthew A. Jackson, Stefan Janssen, Dilip V. Jeste, Lingjing Jiang, Scott T. Kelley, Dan Knights, Tomasz Kosciolek, Joshua Ladau, Jeff Leach, Clarisse Marotz, Dmitry Meleshko, Alexey V. Melnik, Jessica L. Metcalf, Hosein Mohimani, Emmanuel Montassier, Jose Navas-Molina, Tanya T. Nguyen, Shyamal Peddada, Pavel Pevzner, Katherine S. Pollard, Gholamali Rahnavard, Adam Robbins-Pianka, Naseer Sangwan, Joshua Shorenstein, Larry Smarr, Se Jin Song, Timothy Spector, Austin D. Swafford, Varykina G. Thackray, Luke R. Thompson, Anupriya Tripathi, Yoshiki Vázquez-Baeza, Alison Vrbanac, Paul Wischmeyer, Elaine Wolfe, Qiyun Zhu, The American Gut Consortium, Rob Knight. **American Gut: an Open Platform for Citizen Science Microbiome Research**. mSystems May 2018, 3 (3) e00031-18; DOI: 10.1128/mSystems.00031-18 https://msystems.asm.org/content/3/3/e00031-18
+
 <a id="13">[13]</a> Halfvarson, J., Brislawn, C., Lamendella, R. et al. **Dynamics of the human gut microbiome in inflammatory bowel disease**.  Nat Microbiol 2, 17004 (2017). https://doi.org/10.1038/nmicrobiol.2017.4
+
 <a id="14">[14]</a>  Bolyen E, Rideout JR, Dillon MR, Bokulich NA, Abnet CC, Al-Ghalith GA, Alexander H, Alm EJ, Arumugam M, Asnicar F, Bai Y, Bisanz JE, Bittinger K, Brejnrod A, Brislawn CJ, Brown CT, Callahan BJ, Caraballo-Rodríguez AM, Chase J, Cope EK, Da Silva R, Diener C, Dorrestein PC, Douglas GM, Durall DM, Duvallet C, Edwardson CF, Ernst M, Estaki M, Fouquier J, Gauglitz JM, Gibbons SM, Gibson DL, Gonzalez A, Gorlick K, Guo J, Hillmann B, Holmes S, Holste H, Huttenhower C, Huttley GA, Janssen S, Jarmusch AK, Jiang L, Kaehler BD, Kang KB, Keefe CR, Keim P, Kelley ST, Knights D, Koester I, Kosciolek T, Kreps J, Langille MGI, Lee J, Ley R, Liu YX, Loftfield E, Lozupone C, Maher M, Marotz C, Martin BD, McDonald D, McIver LJ, Melnik AV, Metcalf JL, Morgan SC, Morton JT, Naimey AT, Navas-Molina JA, Nothias LF, Orchanian SB, Pearson T, Peoples SL, Petras D, Preuss ML, Pruesse E, Rasmussen LB, Rivers A, Robeson MS, Rosenthal P, Segata N, Shaffer M, Shiffer A, Sinha R, Song SJ, Spear JR, Swafford AD, Thompson LR, Torres PJ, Trinh P, Tripathi A, Turnbaugh PJ, Ul-Hasan S, van der Hooft JJJ, Vargas F, Vázquez-Baeza Y, Vogtmann E, von Hippel M, Walters W, Wan Y, Wang M, Warren J, Weber KC, Williamson CHD, Willis AD, Xu ZZ, Zaneveld JR, Zhang Y, Zhu Q, Knight R, and Caporaso JG. **Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2**. 2019. Nature Biotechnology 37: 852–857. https://doi.org/10.1038/s41587-019-0209-9
 [QIIME2 website](qiime2.org)
+
  <a id="15">[15]</a> Antonio Gonzalez, Jose A. Navas-Molina, Tomasz Kosciolek, Daniel McDonald, Yoshiki Vázquez-Baeza, Gail Ackermann, Jeff DeReus, Stefan Janssen, Austin D. Swafford, Stephanie B. Orchanian, Jon G. Sanders, Joshua Shorenstein, Hannes Holste, Semar Petrus, Adam Robbins-Pianka, Colin J. Brislawn, Mingxun Wang, Jai Ram Rideout, Evan Bolyen, Matthew Dillon, J. Gregory Caporaso, Pieter C. Dorrestein & Rob Knight. **Qiita: rapid, web-enabled microbiome meta-analysis**. Nature Methods, volume 15, pages 796–798 (2018); https://doi.org/10.1038/s41592-018-0141-9
 [Qiita website](https://qiita.ucsd.edu/)
+
 <a id="16">[16]</a>  Amnon Amir, Daniel McDonald, Jose A. Navas-Molina, Evguenia Kopylova, James T. Morton, Zhenjiang Zech Xu, Eric P. Kightley, Luke R. Thompson, Embriette R. Hyde, Antonio Gonzalez, Rob Knight. **Deblur Rapidly Resolves Single-Nucleotide Community Sequence Patterns**. mSystems Mar 2017, 2 (2) e00191-16; DOI: 10.1128/mSystems.00191-16 https://msystems.asm.org/content/2/2/e00191-16
