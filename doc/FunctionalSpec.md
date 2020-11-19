@@ -4,7 +4,7 @@
 
 BACKGROUND
 ----------
-#####_**The problem being addressed**_
+##### _**The problem being addressed**_
 Once thought only to be pathogenic, the microorganisms living on and within an animal host (collectively known as the microbiome) are now recognized as playing critical roles in host health [[1]](#1). For example, symbiotic microorganisms found in the gastrointestinal tract, which constitute the gut microbiome, contribute to nutrient uptake [[2]](#2) and immune system maintenance [[3]](#3) that impact the host’s fitness across its lifespan. <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/influence.png" width="200">Factors that shape gut microbial communities are multifaceted and include the host’s diet [[4]](#4) and life-stage [[5]](#5).
 While microbial shifts have been implicated in numerous human ailments (e.g., obesity, anxiety, inflammatory bowel disease) [[6-8]](#6-8), research has thus far been limited to differentiating microbial communities between groups and less for predictive uses. Therefore, the ability for researchers and medical staff alike to be able to predict a sample's particular status based on microbial composition could further advance our understanding of host-microbiome interactions. Further, as a result of an ever expanding microbiome data availability, microbiome research lends itself to advancement with supervised machine learning [[9]](#9).
 <img align="right" src="https://github.com/kmherman/BioME/blob/main/doc/images/helps.png" width="200"/>With the use of supervised machine learning tools such as BioME, models trained on a dataset of samples with known labels, can be used to predict the labels of unknown samples which could be of particular use in areas such as predicting of disease/susceptibility, sample collection site or even species from which the sample came from [[10]](#10). However, the implementation of machine learning in microbiome research might feel daunting and time consuming to those outside of the realm of data science. Further, determining which machine learning algorithms to use can also be difficult.
@@ -23,7 +23,7 @@ algorithm to perform feature selection on microbiome data and provide the most a
 
 USER PROFILES
 -----
-#####_**Who uses the system. What they know about the domain and computing (e.g., can browse the web, can program in Python).**_
+##### _**Who uses the system. What they know about the domain and computing (e.g., can browse the web, can program in Python).**_
 
 <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/steth.png" width="20">
 ###### Medical Clinicians
@@ -41,7 +41,7 @@ This individual has a solid background in searching the web —_but boy oh boy_�
 
 DATA SOURCES
 ---------
-#####_**What data you will use and how it is structured?**_
+##### _**What data you will use and how it is structured?**_
 Four open source microbiome datasets were obtained and processed in Qiita [[15]](#15). The full bioinformatic pipeline was conducted in Qiita with QIIME2 [[14]](#14) and can be  found [here](https://qiita.ucsd.edu/analysis/description/32520/).
 
 The merged microbiome dataset consist of a count matrix in which the bacterial Operational Taxonomic Units **(OTUs)** assigned with Deblur [[16]](#16) and characterized by 16S rRNA v4 amplicon sequencing as the rows and the sample IDs from which the bacterial count information is obtained are columns. Additionally, there is metadata associated with each sample. OTUs were derived from fecal samples collected from healthy humans **(HC)** and individuals with either Crohn's disease **(CD)**, Ulcerative colitis **(UC)**, or Ileal Crohn's disease **(IC)** [[11-13]](#11-13).
@@ -52,7 +52,7 @@ _**NOTE: We started with five studies but one (ID: 1189) was removed because the
 
 USE CASES
 ---------
-#####_**Describing at least two use cases. For each, describe: (a) the objective of the user interaction; and (b) the expected interactions between the user and your system.**_
+##### _**Describing at least two use cases. For each, describe: (a) the objective of the user interaction; and (b) the expected interactions between the user and your system.**_
 
 <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/steth.png" width="20">
 ###### Medical Clinicians
