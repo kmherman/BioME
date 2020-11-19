@@ -5,9 +5,9 @@
 BACKGROUND
 ----------
 #####_**The problem being addressed**_
-Once thought only to be pathogenic, the microorganisms living on and within an animal host (collectively known as the microbiome) are now recognized as playing critical roles in host health [[1]](#1). For example, symbiotic microorganisms found in the gastrointestinal tract, which constitute the gut microbiome, contribute to nutrient uptake [[2]](#2) and immune system maintenance [[3]](#3) that impact the host’s fitness across its lifespan. <img align="left" src="doc/images/influence.png" width="200">Factors that shape gut microbial communities are multifaceted and include the host’s diet [[4]](#4) and life-stage [[5]](#5).
+Once thought only to be pathogenic, the microorganisms living on and within an animal host (collectively known as the microbiome) are now recognized as playing critical roles in host health [[1]](#1). For example, symbiotic microorganisms found in the gastrointestinal tract, which constitute the gut microbiome, contribute to nutrient uptake [[2]](#2) and immune system maintenance [[3]](#3) that impact the host’s fitness across its lifespan. <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/influence.png" width="200">Factors that shape gut microbial communities are multifaceted and include the host’s diet [[4]](#4) and life-stage [[5]](#5).
 While microbial shifts have been implicated in numerous human ailments (e.g., obesity, anxiety, inflammatory bowel disease) [[6-8]](#6-8), research has thus far been limited to differentiating microbial communities between groups and less for predictive uses. Therefore, the ability for researchers and medical staff alike to be able to predict a sample's particular status based on microbial composition could further advance our understanding of host-microbiome interactions. Further, as a result of an ever expanding microbiome data availability, microbiome research lends itself to advancement with supervised machine learning [[9]](#9).
-<img align="right" src="doc/images/helps.png" width="200"/>With the use of supervised machine learning tools such as BioME, models trained on a dataset of samples with known labels, can be used to predict the labels of unknown samples which could be of particular use in areas such as predicting of disease/susceptibility, sample collection site or even species from which the sample came from [[10]](#10). However, the implementation of machine learning in microbiome research might feel daunting and time consuming to those outside of the realm of data science. Further, determining which machine learning algorithms to use can also be difficult.
+<img align="right" src="https://github.com/kmherman/BioME/blob/main/doc/images/helps.png" width="200"/>With the use of supervised machine learning tools such as BioME, models trained on a dataset of samples with known labels, can be used to predict the labels of unknown samples which could be of particular use in areas such as predicting of disease/susceptibility, sample collection site or even species from which the sample came from [[10]](#10). However, the implementation of machine learning in microbiome research might feel daunting and time consuming to those outside of the realm of data science. Further, determining which machine learning algorithms to use can also be difficult.
 To address these challenges, we developed a tool that implements and compares the performance of:
 * K-Nearest Neighbor
 * Neural Networks
@@ -18,22 +18,22 @@ To address these challenges, we developed a tool that implements and compares th
 
 algorithm to perform feature selection on microbiome data and provide the most accurate model for non-data science researchers to utilize for predicting sample characteristics based on on 16S rRNA microbiome composition data. Here, we applied the tool to analyze fecal microbiome (16S rRNA gene profiles) data collected from healthy humans **(HC)** and individuals with either Crohn's disease **(CD)**, Ulcerative colitis **(UC)**, or Ileal Crohn's disease **(IC)** [[11-13]](#11-13) to display the tools capabilities.
 <p align="center">
-<img src="doc/images/super.png" width="500">
+<img src="https://github.com/kmherman/BioME/blob/main/doc/images/super.png" width="500">
 </p>
 
 USER PROFILES
 -----
 #####_**Who uses the system. What they know about the domain and computing (e.g., can browse the web, can program in Python).**_
 
-<img align="left" src="doc/images/steth.png" width="20">
+<img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/steth.png" width="20">
 ###### Medical Clinicians
 This individual can browse the web and might have no to basic Python skills, but would be uncomfortable with attempting to create their own supervised machine learning pipeline. They would be capable of installing the tool and running BioME appropriately and to interpret the results. They aren't too sure about this and anticipate needing to phone a friend.
 
-<img align="left" src="doc/images/micro.png" width="20">
+<img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/micro.png" width="20">
 ###### Microbiologist
 This individual is very use to the data format, has intermediate skills in using Python. They have some background with bioinformatic pipelines implemented in Python such as [QIIME2](qiime2.org) [[14]](#14) and feel ready to tackle this project.
 
-<img align="left" src="doc/images/leaf2.png" width="20">
+<img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/leaf2.png" width="20">
 ###### Ecologist
 This individual has a solid background in searching the web —_but boy oh boy_— don't they love R & Rstudio and they are only begrudgingly using this tool because R has let them down— Its been too slow, and they are tired of using 10 packages to run three tests... They will give this a try, but don't think you'll be converting them to the dark side anytime soon.
 
@@ -54,7 +54,7 @@ USE CASES
 ---------
 #####_**Describing at least two use cases. For each, describe: (a) the objective of the user interaction; and (b) the expected interactions between the user and your system.**_
 
-<img align="left" src="doc/images/steth.png" width="20">
+<img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/steth.png" width="20">
 ###### Medical Clinicians
 The Medical Clinician has OTU count datasets from individuals with a known inflammatory bowel disease that has been linked to disruption of the fecal microbiome along with data from healthy people. They also have a growing pile of samples from individuals who they suspect have the same disease, but they haven't been diagnosed yet. If they could use BioME on their known cases, they could get results from the top model which could help them diagnose and treat patience before their illness progresses.
 They intend to use the machine to do the heavy lifting for them and use the information to move forward with validating the results, but won't go too much further with using BioME.
@@ -62,14 +62,14 @@ They intend to use the machine to do the heavy lifting for them and use the info
 (**a**) The **Medical Clinician** wants to be able to determine if suspected patients have inflammatory bowel disease so they can begin effective treatment before their health deteriorate, and will use BioME to classify people.
 (**b**) The **Medical Clinician** isn't worried about statistics too much, or even what the best model is, they just want to get fairly accurate results quickly, so they can move forward with either further investigation into diagnosis or treatment.
 
-<img align="left" src="doc/images/micro.png" width="20">
+<img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/micro.png" width="20">
 ###### Microbiologist
 The Microbiologist is intrigued. Can BioME give them some good options for the best algorithm for their dataset? We expect our microbiologist to use BioME as a preliminary tool. Do they see something cool from the results? Is there more to look into? The microbiologist will probably take the information gleaned from BioME and dig into it further. We expect that they might even take the best suggested model and modify/customize it exactly for their data. *They aint afraid of no Python!*
 
 (**a**) The **Microbiologist** is here for the preliminary results/confirmation. The lab intern might have mislabeled some (~100) of the samples. Does say that a *Turdis turdis* sample or just a *Turtle's turds*? They don't want to have to throw out all those samples..
 (**b**) The **Microbiologist** will use it to ensure the samples were labelled correctly with high confidence, and their interaction with BioME will be smooth.
 
-<img align="left" src="doc/images/leaf2.png" width="20">
+<img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/leaf2.png" width="20">
 ###### Ecologist
 The Ecologist (*after making sure there were no other options outside of using Python*) has Python set up, BioME installed, has read all of the files provided several times.
 
