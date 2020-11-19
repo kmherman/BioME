@@ -3,22 +3,22 @@
 ## Input Data
 This software requires the input data to be in .txt format. There are many bioinformatics platforms for pulling and consolidating bioinformatic data, any of which can be used prior to using this software. Most of these platforms will output files in OTU format, CSV, or .txt files. Some platforms bioinformatic platforms, such as QIIME (employed in the sample analysis), can output either OTU or .txt files and converting a .csv file into a .txt file will likely be trivial for BioME users.
 
-
-here are many bioinformatic pipline options to get biome data. This software is compatible with any bioinformatic platform that exports a biom csv file. This data must first be converted to a .txt file in order to use BioME.
 ## Component Specification
 
 1. ### Data manager
     * <ins> Function:</ins> Reads in OTU data and metadata and returns training and testing sets split randomly (90/10).
     * Input: A .txt file containing a biome data table and metadata containing keywords for disease or disease subtypes.
     * Output: Randomly split test and training sets as OTU tables.
+    * Interactions: The user interacts with this component to enter data. This component prompts the user for data and re-prompts if the data entered is not correctly formatted. This component then interacts with the Data pre-processor by returning a correctly formatted input file to the data pre-processor. As this component has already ensured the data type is correct, there is no need for the data pre-processor to interact with the data manager other than simply accepting its output.
 2. ### Data pre-processor
-    * <ins> Function:</ins> Optional feature that uses a dimensionality reduction algorithm to condense the data into fewer features (particularly useful for microbiome data which inherently is very sparse).
-    * Input: .txt formatted test and train datasets
-    * Output: Condensed OTU formatted datasets for use in models
+    * <ins> Function:</ins> Feature that uses a dimensionality reduction algorithm to condense the data into fewer features (particularly useful for microbiome data which inherently is very sparse).
+    * Input: .txt formatted test and train datasets.
+    * Output: Condensed OTU formatted datasets for use in models.
+    * Interactions: This component simply accepts data from the data manager. As the data manager ensures that data is formatted correctly, there is no need for the data pre-processor to communicate with the manager. This  interacts with the model fitting component by returning a cleaned and condensed dataset for the model fitting component to begin training.
 3. ### Model fitting
     * <ins> Function:</ins> Read in OTU data and uses it to train a variety of machine learning models to most accurately fit the data.
-    * Input: OTU formatted test an train datasets (can be condensed by the Data pre-processor module)
-    *
+    * Input: OTU formatted test an train datasets (can be condensed by the Data pre-processor component)
+    * Interactions: This component can be considered a set of subcomponents executing machine learning algorithms in parallel (although for practical purposes, they may be executed one afer another). Each subcomponent accepts a copy of the cleaned dataset from the data pre-processor and begins training a specific machine learning model. Each subcomponent passes its fitted model and a loss function value for the model. The loss function is the same across all subcomponents to better compare them.The subcomponents never interact with each other.
 4. ### Model selector
     * <ins> Function:</ins> Trains each model (list specified by user; default: all) with the training set and calculates the accuracy using the test set. Returns the model with the highest accuracy and gives information on
     * Input: Training set, test set, list of models to test
@@ -47,7 +47,7 @@ A list of tasks in priority order.
 * Write functions to split data into training and test sets.
 * Assign machine learning algorithms to code using sci-kit learn or PyTorch.
 * Add in optional dimensionality algorithm to utilize in ML models.
-* Add in feature extraction module with a visualization tool.
+* Add in feature extraction component with a visualization tool.
 * Add easy to use interface that allows user to select model for use (they can input data point and it'll return a predicted label)
 * Write unittests for code.
 
