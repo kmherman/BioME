@@ -10,6 +10,7 @@ To address these challenges, we developed a tool that implements and compares th
 * K-Nearest Neighbor
 * Neural Network
 * Logistic regression
+* Ridge Classifier
 * Support Vector Machine
 * Decision Tree
 * Random Forest
