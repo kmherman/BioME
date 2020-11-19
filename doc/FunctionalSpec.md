@@ -26,14 +26,17 @@ USER PROFILES
 ##### _**Who uses the system. What they know about the domain and computing (e.g., can browse the web, can program in Python).**_
 
 <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/steth.png" width="20">
+
 ###### Medical Clinicians
 This individual can browse the web and might have no to basic Python skills, but would be uncomfortable with attempting to create their own supervised machine learning pipeline. They would be capable of installing the tool and running BioME appropriately and to interpret the results. They aren't too sure about this and anticipate needing to phone a friend.
 
 <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/micro.png" width="20">
+
 ###### Microbiologist
 This individual is very use to the data format, has intermediate skills in using Python. They have some background with bioinformatic pipelines implemented in Python such as [QIIME2](qiime2.org) [[14]](#14) and feel ready to tackle this project.
 
 <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/leaf2.png" width="20">
+
 ###### Ecologist
 This individual has a solid background in searching the web —_but boy oh boy_— don't they love R & Rstudio and they are only begrudgingly using this tool because R has let them down— Its been too slow, and they are tired of using 10 packages to run three tests... They will give this a try, but don't think you'll be converting them to the dark side anytime soon.
 
@@ -55,6 +58,7 @@ USE CASES
 ##### _**Describing at least two use cases. For each, describe: (a) the objective of the user interaction; and (b) the expected interactions between the user and your system.**_
 
 <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/steth.png" width="20">
+
 ###### Medical Clinicians
 The Medical Clinician has OTU count datasets from individuals with a known inflammatory bowel disease that has been linked to disruption of the fecal microbiome along with data from healthy people. They also have a growing pile of samples from individuals who they suspect have the same disease, but they haven't been diagnosed yet. If they could use BioME on their known cases, they could get results from the top model which could help them diagnose and treat patience before their illness progresses.
 They intend to use the machine to do the heavy lifting for them and use the information to move forward with validating the results, but won't go too much further with using BioME.
@@ -63,6 +67,7 @@ They intend to use the machine to do the heavy lifting for them and use the info
 (**b**) The **Medical Clinician** isn't worried about statistics too much, or even what the best model is, they just want to get fairly accurate results quickly, so they can move forward with either further investigation into diagnosis or treatment.
 
 <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/micro.png" width="20">
+
 ###### Microbiologist
 The Microbiologist is intrigued. Can BioME give them some good options for the best algorithm for their dataset? We expect our microbiologist to use BioME as a preliminary tool. Do they see something cool from the results? Is there more to look into? The microbiologist will probably take the information gleaned from BioME and dig into it further. We expect that they might even take the best suggested model and modify/customize it exactly for their data. *They aint afraid of no Python!*
 
@@ -70,6 +75,7 @@ The Microbiologist is intrigued. Can BioME give them some good options for the b
 (**b**) The **Microbiologist** will use it to ensure the samples were labelled correctly with high confidence, and their interaction with BioME will be smooth.
 
 <img align="left" src="https://github.com/kmherman/BioME/blob/main/doc/images/leaf2.png" width="20">
+
 ###### Ecologist
 The Ecologist (*after making sure there were no other options outside of using Python*) has Python set up, BioME installed, has read all of the files provided several times.
 
