@@ -19,8 +19,8 @@ Component organization and interaction is relatively simple in BioME. With the e
     * Interactions: This component simply accepts data from the data manager. As the data manager ensures that data is formatted correctly, there is no need for the data pre-processor to communicate with the manager. This  interacts with the model fitting component by returning a cleaned and condensed dataset for the model fitting component to begin training. This component can also pass the same data to an optional feature analysis component.
 3. ### Model fitting
     * <ins> Function:</ins> Read in OTU data and uses it to train a variety of machine learning models to most accurately fit the data.
-    * Input: OTU formatted test an train datasets (can be condensed by the Data pre-processor component)
-    * Interactions: This component can be considered a set of subcomponents executing machine learning algorithms in parallel (although for practical purposes, they may be executed one afer another). Each subcomponent accepts a copy of the cleaned dataset from the data pre-processor and begins training a specific machine learning model. Each subcomponent passes its fitted model and a loss function value for the model. The loss function is the same across all subcomponents to better compare them. The subcomponents never interact with each other.
+    * Input: OTU formatted test and train datasets (can be condensed by the Data pre-processor component)
+    * Interactions: This component can be considered a set of subcomponents executing machine learning algorithms in parallel (although for practical purposes, they may be executed one after another). Each subcomponent accepts a copy of the cleaned dataset from the data pre-processor and begins training a specific machine learning model. Each subcomponent passes its fitted model and a loss function value for the model. The loss function is the same across all subcomponents to better compare them. The subcomponents never interact with each other.
 4. ### Model selector
     * <ins> Function:</ins> Trains each model (list specified by user; default: all) with the training set and calculates the accuracy using the test set. Returns the model with the highest accuracy and gives information on
     * Input: Training set, test set, list of models to test
@@ -34,7 +34,7 @@ Component organization and interaction is relatively simple in BioME. With the e
 
 <p><img src="flowChart.PNG" height="650" width="1000" /></p>
 
-# Interactions
+# Interactions to accomplish use cases
 The working mechanism of the specified components will be exemplified through the following use cases:
 1. ### Medical clinician
     * **Goal:** Select the most accurate model to classify a disease or disease subtype using microbiome data from patients and utilize this model to predict a disease diagnosis using the selected model.
