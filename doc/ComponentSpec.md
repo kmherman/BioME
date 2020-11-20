@@ -32,7 +32,7 @@ Component organization and interaction is relatively simple in BioME. With the e
     * Output: Visual and quantitative output indicating relative importance of specific bacteria in predicting that given disease.
     * Interactions: This optional component can accepts processed test and training data sets from the pre-processor component. It perfroms feature analysis and returns a report on feature importance to the user.
 
-![image%20%282%29.png](attachment:image%20%282%29.png)
+<p><img src="flowChart.PNG" height="650" width="1000" /></p>
 
 # Interactions
 The working mechanism of the specified components will be exemplified through the following use cases:
