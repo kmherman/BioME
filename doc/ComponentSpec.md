@@ -44,17 +44,17 @@ The working mechanism of the specified components will be exemplified through th
     * After sifting through the literature, the microbiologist will likely have a good idea of classification models that are popular in the microbiome community. They will have the option to specify which models they are interested in testing from a provided list of algorithms. This will provide them with a fast comparison of the selected models for their dataset. Further, they will likely be itching to understand the microbial basis for these disease subtypes. The feature extraction functionality will provide microbiologists with the tools to better understand which bacteria are most highly associated with the given disease or disease subtype. For those with strong datascience backgrounds, this software may also serve as a starting point for their classification model, allowing further customization for their dataset.
 3. ### The ecologist
     * **Goal:** Select a classification model to utilize on data intended to better understand difference in features (bacteria) and diseases from samples in various environments.
-    * This tool will serve as a screening to determine which algorithms classify their data most accurately. They can use this as a starting point to further develop an algorithm in R or another software that is more comfortable to them. Like in use case 1, the model produced can also be used directly to predict a label or disease classification for new samples that have been collected. THe ecologist can then use these predictions to better understand environmental factors that may contribute to these diseases.
+    * This tool will serve as a screening to determine which algorithms classify their data most accurately. They can use this as a starting point to further develop an algorithm in R or another software that is more comfortable to them. Like in use case 1, the model produced can also be used directly to predict a label or disease classification for new samples that have been collected. The ecologist can then use these predictions to better understand environmental factors that may contribute to these diseases.
 
 # Preliminary Plan
 A list of tasks in priority order.
-* Write functions to split data into training and test sets.
-* Assign machine learning algorithms to code using sci-kit learn or PyTorch.
+* Write function to randomly split data into training and test sets.
+* Implement machine learning algorithms using sci-kit learn or PyTorch.
+* Write unittests for code (continuously).
 * Add in optional dimensionality algorithm to utilize in ML models.
 * Add in feature extraction component with a visualization tool.
 * Add easy to use interface that allows user to select model for use (they can input data point and it'll return a predicted label)
-* Write unittests for code.
-
+* Add feature thatprovides information on misclassifications from test data on model (ie. Which category is most frequently misclassified? Are there more false positive or false negatives?).
 
 ```python
 
