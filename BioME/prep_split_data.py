@@ -70,7 +70,7 @@ def get_one_hot(list_category, y_data, column_number=0):
 def split_train_test(x_data, y_data):
     """
     Function splits data and labels into test and train data (10/90 split)
-    x_train, x_test, y_train, y_test = split_train_test(x_data, y_data)
+    ex. x_train, x_test, y_train, y_test = split_train_test(x_data, y_data)
 
     Parameters:
     x_data = OTU table in form of numpy array with 16S sequences as the columns
