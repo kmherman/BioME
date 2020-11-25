@@ -26,3 +26,6 @@ class TestPrepSplitData(unittest.TestCase):
         """
         with self.assertRaises(ValueError):
             get_one_hot(['cat', 'dog'], np.array([['cat'], ['kitten']]))
+
+if __name__ == '__main__':
+    unittest.main()
