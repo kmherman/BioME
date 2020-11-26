@@ -59,6 +59,10 @@ def get_one_hot(list_category, y_data, column_number=0):
     number_categories = len(list_category)
     one_hot_output = np.zeros((number_samples, number_categories))
     for i in range(number_samples):
+        if y_data[i, column_number] in list_category:
+            pass
+        else:
+            raise ValueError('Categorical label is not contained in list')
         for j in range(number_categories):
             if y_data[i, column_number] == list_category[j]:
                 one_hot_output[i, j] += 1
@@ -74,7 +78,7 @@ def split_train_test(x_data, y_data):
 
     Parameters:
     x_data = OTU table in form of numpy array with 16S sequences as the columns
-    y_data = one-hot encoded categorical labels
+    y_data = one-hot encoded categorical labels or unencoded y data
 
     Returns:
     x_train = Random 90% of OTU data
@@ -82,6 +86,10 @@ def split_train_test(x_data, y_data):
     y_train = Random 90% of one-hot encoded labels/y array
     y_test = Random 10% of one-hot encoded labels/y array
     """
+    if np.size(x_data, axis=0) == np.size(y_data, axis=0):
+        pass
+    else:
+        raise IndexError('x_data and y_data have different number of samples')
     number_samples = np.size(x_data, axis=0)
     rand_indices = np.random.permutation(number_samples)
     train_size = round(number_samples*0.9)
