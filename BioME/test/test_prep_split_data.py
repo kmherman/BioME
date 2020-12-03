@@ -39,7 +39,8 @@ class TestPrepSplitData(unittest.TestCase):
         is returned.
         """
         self.assertTrue(isinstance(data_loader('../Data/bug_OTU_rel.tsv',
-                                               '../Data/FecesMeta.txt'), tuple))
+                                               '../Data/FecesMeta.txt'),
+                                               tuple))
 
     def test_shot1(self):
         """
