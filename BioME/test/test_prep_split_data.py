@@ -38,8 +38,8 @@ class TestPrepSplitData(unittest.TestCase):
         Smoke test on data_loader to ensure that a tuple (of two arrays)
         is returned.
         """
-        self.assertTrue(isinstance(data_loader('../bug_OTU_rel.tsv',
-                                               '../FecesMeta.txt'), tuple))
+        self.assertTrue(isinstance(data_loader('../Data/bug_OTU_rel.tsv',
+                                               '../Data/FecesMeta.txt'), tuple))
 
     def test_shot1(self):
         """
