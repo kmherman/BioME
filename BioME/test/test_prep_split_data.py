@@ -23,9 +23,7 @@ import unittest
 
 import numpy as np
 
-from prep_split_data import data_loader
-from prep_split_data import get_one_hot
-from prep_split_data import split_train_test
+import prep_split_data
 
 
 class TestPrepSplitData(unittest.TestCase):
@@ -38,8 +36,8 @@ class TestPrepSplitData(unittest.TestCase):
         Smoke test on data_loader to ensure that a tuple (of two arrays)
         is returned.
         """
-        self.assertTrue(isinstance(data_loader('../Data/bug_OTU_rel.tsv',
-                                               '../Data/FecesMeta.txt'),
+        self.assertTrue(isinstance(prep_split_data.data_loader(
+                        '../Data/bug_OTU_rel.tsv', '../Data/FecesMeta.txt'),
                         tuple))
 
     def test_shot1(self):
@@ -47,7 +45,8 @@ class TestPrepSplitData(unittest.TestCase):
         One-shot test on get_one_hot to check that one-hot encoding is
         correctly performed.
         """
-        self.assertTrue((get_one_hot(['cat', 'dog'], np.array([['cat'],
+        self.assertTrue((prep_split_data.get_one_hot(['cat', 'dog'],
+                                                     np.array([['cat'],
                                                                ['dog']]))
                          == np.array([[1, 0], [0, 1]])).all())
 
@@ -57,13 +56,14 @@ class TestPrepSplitData(unittest.TestCase):
         in data is not present in list.
         """
         with self.assertRaises(ValueError):
-            get_one_hot(['cat', 'dog'], np.array([['kitten']]))
+            prep_split_data.get_one_hot(['cat', 'dog'], np.array([['kitten']]))
 
     def test_shot2(self):
         """
         One-shot test on split_train_test to ensure 90/10 split of data.
         """
-        xtrain, xtest, ytrain, ytest = split_train_test(np.array([[0], [1],
+        xtrain, xtest, ytrain, ytest = prep_split_data.split_train_test(
+                                                        np.array([[0], [1],
                                                                   [2], [3],
                                                                   [4], [5],
                                                                   [6], [7],
@@ -84,10 +84,14 @@ class TestPrepSplitData(unittest.TestCase):
         x_data and y_data do not have the same number of samples.
         """
         with self.assertRaises(IndexError):
-            split_train_test(np.array([[0], [1], [2], [3], [4], [5], [6], [7],
-                                       [8], [9]]),
-                             np.array([[0], [1], [2], [3], [4], [5], [6], [7],
-                                       [8]]))
+            prep_split_data.split_train_test(np.array([[0], [1], [2], [3],
+                                                       [4], [5], [6], [7],
+                                                       [8], [9]]),
+                                             np.array([[0], [1],
+                                                       [2], [3],
+                                                       [4], [5],
+                                                       [6], [7],
+                                                       [8]]))
 
 
 if __name__ == '__main__':
