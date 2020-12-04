@@ -31,7 +31,7 @@ def Ridge_regress(X,y):
     """ ridge regression.
         X is the independent variables, and must be in the format of array(can be multidimensional array)
         y is dependent variable, and must be in the fromat of array (1-D array only)
-        this function return a model only
+        this function return a model, and a list of coefficient which can be consider as the feature importance
     """
     simplefilter("ignore", category=ConvergenceWarning)
     model = RandomForestClassifier()
@@ -56,6 +56,7 @@ def Ridge_regress(X,y):
     max_feature = params[index]['max_features']
     criterion = params[index]['criterion']
     model = RandomForestClassifier(random_state=0,n_estimators=n_estimator,max_features=max_feature,criterion=criterion).fit(X,y)
-    return model
+    coeff = list(model.feature_importances_)
+    return model, coeff
 
     

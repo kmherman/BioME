@@ -29,7 +29,7 @@ def logistic_regress(X,y):
     """ logistic regression.
         X is the independent variables, and must be in the format of array(can be multidimensional array)
         y is dependent variable, and must be in the fromat of array (1-D array only)
-        this function return a model only
+        this function return a model, and also a list of coefficient for each independent variable 
     """
     simplefilter("ignore", category=ConvergenceWarning)
     model = LogisticRegression()
@@ -54,4 +54,5 @@ def logistic_regress(X,y):
     penalty = params[index]['penalty']
     solver = params[index]['solver']
     model = LogisticRegression(random_state=0,penalty=penalty,solver=solver,C=regulation).fit(X, y)
-    return model
+    coeff= list(model.coef_[0]*np.std(X, 0))
+    return model, coeff
