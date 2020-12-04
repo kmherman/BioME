@@ -19,11 +19,15 @@ of appropriate sizes (90/10 train/test).
 test_edge2(self) -- function tests that split_train_test raises an exception
 when the x and y data have a different number of samples.
 """
+import os
 import unittest
 
 import numpy as np
 
-import prep_split_data
+import BioME
+
+
+data_path = os.path.join(BioME.__path__[0], 'Data')
 
 
 class TestPrepSplitData(unittest.TestCase):
@@ -36,18 +40,19 @@ class TestPrepSplitData(unittest.TestCase):
         Smoke test on data_loader to ensure that a tuple (of two arrays)
         is returned.
         """
-        self.assertTrue(isinstance(prep_split_data.data_loader(
-                        '../Data/bug_OTU_rel.tsv', '../Data/FecesMeta.txt'),
-                        tuple))
+        path_OTU = os.path.join(data_path, 'bug_OTU_rel.tsv')
+        path_meta = os.path.join(data_path, 'FecesMeta.txt')
+        self.assertTrue(isinstance(BioME.data_loader(
+                        path_OTU, path_meta), tuple))
 
     def test_shot1(self):
         """
         One-shot test on get_one_hot to check that one-hot encoding is
         correctly performed.
         """
-        self.assertTrue((prep_split_data.get_one_hot(['cat', 'dog'],
-                                                     np.array([['cat'],
-                                                               ['dog']]))
+        self.assertTrue((BioME.get_one_hot(['cat', 'dog'],
+                                           np.array([['cat'],
+                                                     ['dog']]))
                          == np.array([[1, 0], [0, 1]])).all())
 
     def test_edge1(self):
@@ -56,13 +61,13 @@ class TestPrepSplitData(unittest.TestCase):
         in data is not present in list.
         """
         with self.assertRaises(ValueError):
-            prep_split_data.get_one_hot(['cat', 'dog'], np.array([['kitten']]))
+            BioME.get_one_hot(['cat', 'dog'], np.array([['kitten']]))
 
     def test_shot2(self):
         """
         One-shot test on split_train_test to ensure 90/10 split of data.
         """
-        xtrain, xtest, ytrain, ytest = prep_split_data.split_train_test(
+        xtrain, xtest, ytrain, ytest = BioME.split_train_test(
                                                         np.array([[0], [1],
                                                                   [2], [3],
                                                                   [4], [5],
@@ -84,14 +89,11 @@ class TestPrepSplitData(unittest.TestCase):
         x_data and y_data do not have the same number of samples.
         """
         with self.assertRaises(IndexError):
-            prep_split_data.split_train_test(np.array([[0], [1], [2], [3],
+            BioME.split_train_test(np.array([[0], [1], [2], [3],
                                                        [4], [5], [6], [7],
                                                        [8], [9]]),
-                                             np.array([[0], [1],
-                                                       [2], [3],
-                                                       [4], [5],
-                                                       [6], [7],
-                                                       [8]]))
+                                   np.array([[0], [1], [2], [3],
+                                             [4], [5], [6], [7], [8]]))
 
 
 if __name__ == '__main__':
