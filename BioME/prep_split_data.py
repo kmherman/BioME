@@ -71,7 +71,7 @@ def get_one_hot(list_category, y_data, column_number=0):
     return one_hot_output
 
 
-def split_train_test(x_data, y_data):
+def split_train_test(x_data, y_data, train_split=0.9):
     """
     Function splits data and labels into test and train data (10/90 split)
     ex. x_train, x_test, y_train, y_test = split_train_test(x_data, y_data)
@@ -92,7 +92,7 @@ def split_train_test(x_data, y_data):
         raise IndexError('x_data and y_data have different number of samples')
     number_samples = np.size(x_data, axis=0)
     rand_indices = np.random.permutation(number_samples)
-    train_size = round(number_samples*0.9)
+    train_size = round(number_samples*train_split)
     train_indices = rand_indices[0:train_size]
     test_indices = rand_indices[train_size:]
     x_train = x_data[train_indices]
