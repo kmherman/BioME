@@ -4,14 +4,11 @@ Created on Mon Nov 30 14:29:42 2020
 
 @author: LT
 """
-import numpy 
+import numpy
 from sklearn.svm import SVC
 import sklearn.model_selection
 
-## This will need data_ loader and split_train_test to work
-
-
-
+# This will need data_ loader and split_train_test to work
 
 """
 This module contains functions to train a supporter vector classifier (SVC)
@@ -20,10 +17,6 @@ model.
 The get_SVC method takes training data and returns a trained and fitted SVC
 model.
 """
-
-
-
-
 
 def get_SVC(x_train, y_train):
     """
@@ -46,8 +39,8 @@ def get_SVC(x_train, y_train):
     model : A trained and fitted SVC model.
 
     """
-    if isinstance(x_train, numpy.ndarray) == False or \
-        isinstance(y_train, numpy.ndarray) == False:
+    if isinstance(x_train, numpy.ndarray) is False or \
+        isinstance(y_train, numpy.ndarray) is False:
         raise TypeError("Training data must be numpy arrays.")
     x_shape = numpy.shape(x_train)
     y_shape = numpy.shape(y_train)
