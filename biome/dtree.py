@@ -28,10 +28,7 @@ def decision_tree(x_train, y_train):
         fromat: of array (1-D array only)
     ______________
     Return:
-        model: trained DT model with the best parameters.
-    ______________
-    Note:
-        The model will need to be re-fitted prior to making predictions
+        model_out: trained DT model with the best parameters.
     """
     if isinstance(x_train, np.ndarray) is False:
         raise TypeError("Training data must be numpy arrays.")
