@@ -24,7 +24,7 @@ import unittest
 
 import numpy as np
 
-import BioME
+import biome
 
 
 data_path = os.path.join(BioME.__path__[0], 'Data')
