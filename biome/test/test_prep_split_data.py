@@ -42,7 +42,7 @@ class TestPrepSplitData(unittest.TestCase):
         """
         path_OTU = os.path.join(data_path, 'bug_OTU_rel.tsv')
         path_meta = os.path.join(data_path, 'FecesMeta.txt')
-        self.assertTrue(isinstance(BioME.data_loader(
+        self.assertTrue(isinstance(biome.data_loader(
                         path_OTU, path_meta), tuple))
 
     def test_shot1(self):
@@ -50,7 +50,7 @@ class TestPrepSplitData(unittest.TestCase):
         One-shot test on get_one_hot to check that one-hot encoding is
         correctly performed.
         """
-        self.assertTrue((BioME.get_one_hot(['cat', 'dog'],
+        self.assertTrue((biome.get_one_hot(['cat', 'dog'],
                                            np.array([['cat'],
                                                      ['dog']]))
                          == np.array([[1, 0], [0, 1]])).all())
@@ -61,13 +61,13 @@ class TestPrepSplitData(unittest.TestCase):
         in data is not present in list.
         """
         with self.assertRaises(ValueError):
-            BioME.get_one_hot(['cat', 'dog'], np.array([['kitten']]))
+            biome.get_one_hot(['cat', 'dog'], np.array([['kitten']]))
 
     def test_shot2(self):
         """
         One-shot test on split_train_test to ensure 90/10 split of data.
         """
-        xtrain, xtest, ytrain, ytest = BioME.split_train_test(
+        xtrain, xtest, ytrain, ytest = biome.split_train_test(
                                                         np.array([[0], [1],
                                                                   [2], [3],
                                                                   [4], [5],
@@ -89,7 +89,7 @@ class TestPrepSplitData(unittest.TestCase):
         x_data and y_data do not have the same number of samples.
         """
         with self.assertRaises(IndexError):
-            BioME.split_train_test(np.array([[0], [1], [2], [3],
+            biome.split_train_test(np.array([[0], [1], [2], [3],
                                                        [4], [5], [6], [7],
                                                        [8], [9]]),
                                    np.array([[0], [1], [2], [3],
