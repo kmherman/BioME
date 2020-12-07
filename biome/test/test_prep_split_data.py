@@ -27,7 +27,7 @@ import numpy as np
 import biome
 
 
-data_path = os.path.join(BioME.__path__[0], 'Data')
+data_path = os.path.join(biome.__path__[0], 'Data')
 
 
 class TestPrepSplitData(unittest.TestCase):
