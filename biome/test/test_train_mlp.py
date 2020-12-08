@@ -3,7 +3,6 @@ Unittest module to test train_mlp module.
 
 
 """
-import os
 import unittest
 
 import numpy as np
@@ -11,12 +10,6 @@ import torch
 
 import biome
 
-#x_in = torch.tensor([[2, 0], [0, 2]])
-#w0 = torch.tensor([[2, 1], [1, 2]])
-#b0 = torch.tensor([[2, 1], [2, 1]])                
-#w1 = torch.tensor([[1, 2], [1, 2]])
-#b1 = torch.tensor([[-13, -14], [-13, -12]])
-#print(biome.forward_nn1(x_in, w0, w1, b0, b1))
 
 class TestTrainMLP(unittest.TestCase):
     """
@@ -51,7 +44,7 @@ class TestTrainMLP(unittest.TestCase):
         w3 = torch.tensor([[1, 2], [2, 1]])
         b3 = torch.tensor([[-12, -14], [-17, -15]])
         self.assertTrue((biome.forward_nn3(x_in, w0, w1, w2, w3, b0, b1, b2,
-                                          b3)
+                                           b3)
                          == torch.tensor([[1, 0], [0, 1]])).all())
 
     def test_smoke1(self):
