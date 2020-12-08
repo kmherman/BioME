@@ -16,9 +16,10 @@ x_train, x_test, y_train, y_test = psd.split_train_test(x, y)
 gnb = GaussianNB()
 y_pred = gnb.fit(x_train, y_train).predict(x_test)
 
-print("Number of mislabeled points out of a total %d points : %d" \
-      %(x_test.shape[0], (y_test != y_pred).sum()))
-    
+# print("Number of mislabeled points out of a total %d points : %d" \
+#      %(x_test.shape[0], (y_test != y_pred).sum()))
+
+
 def gaussian_NB(x_train, y_train):
     """
     This method constructs and trains a Guassian Naive Bayes (GNB)
@@ -28,7 +29,7 @@ def gaussian_NB(x_train, y_train):
     ----------
     x_train : training data as a numpy array
     y_train : training labels as a numpy array
-    
+
     Returns
     -------
     A trained GNB model (sklearn.naive_bayes.GaussianNB)

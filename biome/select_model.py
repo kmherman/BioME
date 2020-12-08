@@ -25,7 +25,7 @@ from SVC import get_SVC
 from dtree import decision_tree
 from knn import knn
 from forest import ridge_regress
-from naive_bayes import gaussian_NB 
+from naive_bayes import gaussian_NB
 
 
 def get_trained_models(x_train, y_train, list_models):
