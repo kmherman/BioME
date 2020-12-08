@@ -13,4 +13,4 @@ import biome.naive_bayes as nb
 x, y = load_iris(return_X_y=True)
 x_train, x_test, y_train, y_test = biome.split_train_test(x, y)
 
-model = nb.naive_bayes(x_train, y_train)
+# model = nb.naive_bayes(x_train, y_train)
