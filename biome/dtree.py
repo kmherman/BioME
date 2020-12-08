@@ -28,11 +28,7 @@ def decision_tree(x_train, y_train):
         fromat: of array (1-D array only)
     ______________
     Return:
-        model: DT model containing the best parameters as
-        determined by GridSearchCV
-    ______________
-    Note:
-        The model will need to be re-fitted prior to making predictions
+        model_out: trained DT model with the best parameters.
     """
     if isinstance(x_train, np.ndarray) is False:
         raise TypeError("Training data must be numpy arrays.")
@@ -60,4 +56,5 @@ def decision_tree(x_train, y_train):
                 max_depth=dtree_gscv.best_params_['max_depth'],
                 max_features=dtree_gscv.best_params_['max_features'],
                 random_state=0)
-    return model
+    model_out = model.fit(x_train, y_train)
+    return model_out
