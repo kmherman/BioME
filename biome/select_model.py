@@ -25,6 +25,7 @@ from SVC import get_SVC
 from dtree import decision_tree
 from knn import knn
 from forest import ridge_regress
+from naive_bayes import gaussian_NB 
 
 
 def get_trained_models(x_train, y_train, list_models):
@@ -44,7 +45,7 @@ def get_trained_models(x_train, y_train, list_models):
     y_train_num = np.argmax(y_train, 1)
     if 'all' in list_models:
         list_models_all = ['mlp1', 'mlp3', 'lr', 'rr', 'svc', 'dtree', 'knn',
-                           'rf']
+                           'rf', 'gnb']
     else:
         list_models_all = list_models
     if 'mlp1' in list_models_all:
@@ -87,6 +88,11 @@ def get_trained_models(x_train, y_train, list_models):
         trained_models.append(rf_model)
     else:
         pass
+    if 'gnb' in list_models_all:
+        gnb_model = gaussian_NB(x_train, y_train_num)
+        trained_models.append(gnb_model)
+    else:
+        pass
     return trained_models
 
 
@@ -119,7 +125,7 @@ def evaluate_rank_models(x_train, y_train, x_test, y_test, list_models):
     count = 0
     if 'all' in list_models:
         list_models_all = ['mlp1', 'mlp3', 'lr', 'rr', 'svc', 'dtree', 'knn',
-                           'rf']
+                           'rf', 'gnb']
     else:
         list_models_all = list_models
     if 'mlp1' in list_models_all:
@@ -199,6 +205,15 @@ def evaluate_rank_models(x_train, y_train, x_test, y_test, list_models):
         count += 1
         score_list.append(['Random Forest',
                            score.astype('float16')])
+    else:
+        pass
+    if 'gnb' in list_models_all:
+        gnb_model = trained_models[count]
+        model_out = gnb_model.predict(x_test).reshape(-1, 1)
+        score = accuracy_score(y_test_num, model_out)
+        count += 1
+        score_list.append(['Gaussian Naive Bayes',
+                          score.astype('float16')])
     else:
         pass
     sorted_list = sorted(score_list, key=lambda x: x[1], reverse=True)
