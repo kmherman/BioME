@@ -7,8 +7,10 @@ CSE583 Final Project
 |[Project Homepage](https://kmherman.github.io/BioME/)|
 |---| 
 
-How to utilize the BioME software:
-1. Move to Biome/biome/ ("cd Biome/biome/")
+#### Installation Instructions:
+  
+#### How to utilize the BioME software:
+1. Move to Biome/biome/ ("cd BioME/biome/")
 2. Execute the biome.py file by typing "python3 biome.py"
 3. Provide user input for prompts (input is case-sensitive)
 
