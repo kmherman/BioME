@@ -7,7 +7,7 @@ CSE583 Final Project
 |[Project Homepage](https://kmherman.github.io/BioME/)|
 |---| 
 
-#### Installation Instructions:
+#### Installation Instructions  
   
 #### How to utilize the BioME software:
 1. Move to Biome/biome/ ("cd BioME/biome/")
@@ -15,15 +15,15 @@ CSE583 Final Project
 3. Provide user input for prompts (input is case-sensitive)
 
 Machine learning algorithm abbreviations:  
-mlp1 - Multilayer perceptron with 1 hidden layer  
-mlp3 - Multilayer perceptron with 3 hidden layers  
-lr - logistic regression  
-rr - ridge classifier (L2 regularizer)  
-dtree - decision tree  
-svc - support vector classifier  
-knn - k-nearest neighbors algorithm (implemented with PCA)  
-forest - random forest  
-gnb - Gaussian Naive-Bayes  
++ mlp1 - Multilayer perceptron with 1 hidden layer  
++ mlp3 - Multilayer perceptron with 3 hidden layers  
++ lr - logistic regression  
++ rr - ridge classifier (L2 regularizer)  
++ dtree - decision tree  
++ svc - support vector classifier  
++ knn - k-nearest neighbors algorithm (implemented with PCA)  
++ forest - random forest  
++ gnb - Gaussian Naive-Bayes  
   
-all - train and evaluate every machine learning algorithm available (all above)  
++ all - train and evaluate every machine learning algorithm available (all above)  
 (*for more information on these ML algorithms, see the attached GitHub page.)  
