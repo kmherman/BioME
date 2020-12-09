@@ -5,7 +5,7 @@ This module contains unit tests for the naive_bayes.py module
 
 import unittest
 from sklearn.datasets import load_iris  # A sample dataset for classification
-import biome.test_prep_split_data as tsp
+from biome import test_prep_split_data as tsp
 from biome import naive_bayes as nb
 
 
