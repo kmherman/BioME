@@ -1,4 +1,4 @@
-""" This module is to develop the base training model with losgistic regression
+""" This module is to develop the base training model with random forest
     This module contain only one function
     warning: random forest algorthm may take more 10 minute to run
 """
@@ -11,8 +11,8 @@ from sklearn.exceptions import ConvergenceWarning
 import numpy as np
 
 
-def ridge_regress(x_train, y_train):
-    """ ridge regression.
+def random_forest(x_train, y_train):
+    """ random forest
         X is the independent variables,
         and must be in the format of
         array(can be multidimensional array)
