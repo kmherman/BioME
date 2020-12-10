@@ -89,6 +89,7 @@ def get_trained_models(x_train, y_train, list_models):
     else:
         pass
     if 'gnb' in list_models_all:
+        gnb_model = GNB(x_train, y_train_num)
         gnb_model = GNB.get_GNB(x_train, y_train_num)
         trained_models.append(gnb_model)
     else:

@@ -1,15 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Nov 30 14:29:42 2020
-
-@author: LT
-"""
-import numpy as np
-from sklearn.svm import SVC
-import sklearn.model_selection
-
-# This will need data_ loader and split_train_test to work
-
 """
 This module contains functions to train a supporter vector classifier (SVC)
 model.
@@ -17,6 +5,11 @@ model.
 The get_SVC method takes training data and returns a trained and fitted SVC
 model.
 """
+
+
+import numpy as np
+from sklearn.svm import SVC
+import sklearn.model_selection
 
 
 def get_SVC(x_train, y_train):
@@ -27,32 +20,30 @@ def get_SVC(x_train, y_train):
     ----------
     x_train : Training data, numpy.ndarray of shape (I,J)
     y_train : Training labels, numpy.ndarry of shape (I,)
-
+    
     Raises
     ------
     TypeError
         Raised if either or both of the input data is the incorrect type.
     ValueError
         Raised if the X and Y training data are incorrectly shaped.
-
+        
     Returns
     -------
     model : A trained and fitted SVC model.
-
     """
     # Reshape y_data into vector:
     y_train = y_train.ravel()
     # Check data type:
-    if isinstance(x_train,
-                  np.ndarray) is False or isinstance(y_train,
-                                                     np.ndarray) is False:
+    if isinstance(x_train, np.ndarray) is False or \
+            isinstance(y_train, np.ndarray) is False:
         raise TypeError("Training data must be numpy arrays.")
     # Check shape:
     x_shape = np.shape(x_train)
     y_shape = np.shape(y_train)
     if x_shape[0] != y_shape[0]:
         raise ValueError("The number of rows in the X training data must be"
-                         "equal to the length of the Y training data vector."
+                         "equal to the length of the Y training vector."
                          "\n Rows in X: " + str(x_shape[0]) +
                          "\n Length of Y: " + str(y_shape[0]))
     # Search and select best model parameters:
