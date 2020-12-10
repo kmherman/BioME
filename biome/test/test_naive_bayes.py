@@ -9,7 +9,6 @@ from biome import prep_split_data as psd
 from biome import naive_bayes as nb
 
 
-
 class UnitTests(unittest.TestCase):
 
     x, y = load_iris(return_X_y=True)
