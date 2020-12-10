@@ -20,14 +20,14 @@ def get_SVC(x_train, y_train):
     ----------
     x_train : Training data, numpy.ndarray of shape (I,J)
     y_train : Training labels, numpy.ndarry of shape (I,)
-    
+
     Raises
     ------
     TypeError
         Raised if either or both of the input data is the incorrect type.
     ValueError
         Raised if the X and Y training data are incorrectly shaped.
-        
+
     Returns
     -------
     model : A trained and fitted SVC model.
