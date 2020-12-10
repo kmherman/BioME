@@ -24,7 +24,7 @@ def logistic_regress(x_train, y_train):
     simplefilter("ignore", category=ConvergenceWarning)
     model = LogisticRegression()
     solvers = ['newton-cg', 'lbfgs', 'liblinear', 'sag', 'saga']
-    penalties = ['l1', 'l2', 'elasticnet', 'none']
+    penalties = ['l1', 'l2', 'elasticnet']
     c_values = [100, 10, 1.0, 0.1, 0.01]
     grid = dict(solver=solvers, penalty=penalties, C=c_values)
     con_v = RepeatedStratifiedKFold(n_splits=10,
