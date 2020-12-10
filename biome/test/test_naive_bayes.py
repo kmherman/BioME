@@ -9,11 +9,12 @@ from biome import prep_split_data as psd
 from biome import naive_bayes as nb
 
 
+
 class UnitTests(unittest.TestCase):
 
     x, y = load_iris(return_X_y=True)
-    x_train, x_test, y_train, y_test = psd(x, y)
-    y_pred = [2, 1, 0, 0, 2, 1, 1, 2, 0, 2, 1, 1, 1, 1, 1]
+    x_train, x_test, y_train, y_test = psd.split_train_test(x, y)
+
     model = nb.get_GNB(x_train, y_train)
 
     def test_data_type(self):

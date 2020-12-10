@@ -7,6 +7,17 @@ with predict().
 The quick_test() method returns the number of incorrectly predicted samples
 and the total number of samples to do a preliminary check on the model.
 """
+
+
+"""
+This module contains a class for Gaussian Naive Bayes classification.
+The user initializes a "blank" model with the command GNB().
+Then the user can train the model with the method get_GNB() and predict data
+with predict().
+
+The quick_test() method returns the number of incorrectly predicted samples
+and the total number of samples to do a preliminary check on the model.
+"""
 import numpy as np
 from sklearn.naive_bayes import GaussianNB
 
@@ -15,11 +26,9 @@ class GNB():
 
     MODEL = GaussianNB()
 
-    def __init__(self, x_train, y_train, x_test, y_test):
+    def __init__(self, x_train, y_train):
         self.x_train = x_train
         self.y_train = y_train
-        self.x_test = x_test
-        self.y_test = y_test
 
     def get_GNB(self):
         """
@@ -56,7 +65,7 @@ class GNB():
         return trained_model
 
     def predict(x_test):
-        y_pred = GNB.trained_model.predict(GNB.x_test)
+        y_pred = GNB.trained_model.predict(x_test)
         return y_pred
 
     def quick_test(self):

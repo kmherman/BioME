@@ -15,17 +15,17 @@ import numpy as np
 import torch
 from sklearn.metrics import accuracy_score
 
-from train_mlp import forward_nn1
-from train_mlp import forward_nn3
-from train_mlp import train_nn1
-from train_mlp import train_nn3
-from logistic import logistic_regress
-from ridge import Ridge_regress
-from SVC import get_SVC
-from dtree import decision_tree
-from knn import knn
-from forest import ridge_regress
-from naive_bayes import GNB
+from .train_mlp import forward_nn1
+from .train_mlp import forward_nn3
+from .train_mlp import train_nn1
+from .train_mlp import train_nn3
+from .logistic import logistic_regress
+from .ridge import Ridge_regress
+from .SVC import get_SVC
+from .dtree import decision_tree
+from .knn import knn
+from .forest import random_forest
+from .naive_bayes import GNB
 
 
 def get_trained_models(x_train, y_train, list_models):
@@ -84,12 +84,13 @@ def get_trained_models(x_train, y_train, list_models):
     else:
         pass
     if 'rf' in list_models_all:
-        rf_model, coeff = ridge_regress(x_train, y_train_num)
+        rf_model, coeff = random_forest(x_train, y_train_num)
         trained_models.append(rf_model)
     else:
         pass
     if 'gnb' in list_models_all:
         gnb_model = GNB(x_train, y_train_num)
+        gnb_model = GNB.get_GNB(x_train, y_train_num)
         trained_models.append(gnb_model)
     else:
         pass
