@@ -14,18 +14,19 @@ classification given a query data point.
 import numpy as np
 import torch
 from sklearn.metrics import accuracy_score
+from sklearn.decomposition import PCA
 
-from .train_mlp import forward_nn1
-from .train_mlp import forward_nn3
-from .train_mlp import train_nn1
-from .train_mlp import train_nn3
-from .logistic import logistic_regress
-from .ridge import Ridge_regress
-from .SVC import get_SVC
-from .dtree import decision_tree
-from .knn import knn
-from .forest import random_forest
-from .naive_bayes import GNB
+from train_mlp import forward_nn1
+from train_mlp import forward_nn3
+from train_mlp import train_nn1
+from train_mlp import train_nn3
+from logistic import logistic_regress
+from ridge import Ridge_regress
+from SVC import get_SVC
+from dtree import decision_tree
+from knn import knn
+from forest import random_forest
+from naive_bayes import GNB
 
 
 def get_trained_models(x_train, y_train, list_models):
@@ -192,7 +193,10 @@ def evaluate_rank_models(x_train, y_train, x_test, y_test, list_models):
         pass
     if 'knn' in list_models_all:
         knn_model = trained_models[count]
-        model_out = knn_model.predict(x_test).reshape(-1, 1)
+        pca = PCA(n_components=2)
+        X_train = pca.fit_transform(x_train)
+        X_test = pca.transform(x_test)
+        model_out = knn_model.predict(X_test).reshape(-1, 1)
         score = accuracy_score(y_test_num, model_out)
         count += 1
         score_list.append(['k-nearest neighbors',
