@@ -6,7 +6,7 @@ Created on Mon Dec  7 13:03:01 2020
 """
 import numpy as np
 from sklearn.naive_bayes import GaussianNB
-from prep_split_data import split_train_test
+from .prep_split_data import split_train_test
 
 from sklearn.datasets import load_iris
 
@@ -24,7 +24,7 @@ class GNB():
         self.x_test = x_test
         self.y_test = y_test
 
-    def get_GNB(x_train, y_train):
+    def get_GNB():
         """
         This method constructs and trains a Guassian Naive Bayes (GNB)
         classification model with user input training data.
