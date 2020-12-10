@@ -5,14 +5,14 @@ This module contains unit tests for the naive_bayes.py module
 
 import unittest
 from sklearn.datasets import load_iris  # A sample dataset for classification
-from biome import test_prep_split_data as tsp
+from biome import prep_split_data as psd
 from biome import naive_bayes as nb
 
 
 class UnitTests(unittest.TestCase):
 
     x, y = load_iris(return_X_y=True)
-    x_train, x_test, y_train, y_test = tsp(x, y)
+    x_train, x_test, y_train, y_test = psd(x, y)
     y_pred = [2, 1, 0, 0, 2, 1, 1, 2, 0, 2, 1, 1, 1, 1, 1]
     model = nb.get_GNB(x_train, y_train)
 
