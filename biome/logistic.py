@@ -54,5 +54,4 @@ def logistic_regress(x_train, y_train):
                                penalty=penalty,
                                solver=solver,
                                C=regulation).fit(x_train, y_train)
-    coeff = list(model.coef_[0]*np.std(x_train, 0))
-    return model, coeff
+    return model

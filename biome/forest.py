@@ -55,5 +55,4 @@ def ridge_regress(x_train, y_train):
                                    n_estimators=n_estimator,
                                    max_features=max_feature,
                                    criterion=criterion).fit(x_train, y_train)
-    coeff = list(model.feature_importances_)
-    return model, coeff
+    return model
