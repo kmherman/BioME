@@ -49,4 +49,5 @@ def Ridge_regress(x_train, y_train):
     alpha = params[index]['alpha']
     solver = params[index]['solver']
     model = RidgeClassifier(alpha=alpha, solver=solver).fit(x_train, y_train)
-    return model
+    coeff= list(model.coef_[0]*np.std(x_train, 0))
+    return model, coeff
