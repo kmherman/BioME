@@ -14,4 +14,5 @@ from .SVC import get_SVC
 
 __all__ = [data_loader, get_one_hot, split_train_test, forward_nn1,
            forward_nn3, train_nn1, train_nn3, get_trained_models,
-           evaluate_rank_models, logistic_regress, random_forest]
+           evaluate_rank_models, logistic_regress, random_forest,
+           GNB, get_SVC]
