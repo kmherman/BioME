@@ -7,16 +7,18 @@ CSE583 Final Project
 |[Project Homepage](https://kmherman.github.io/BioME/)|
 |---| 
 
-#### Installation Instructions  
+
+### Installation Instructions  
 * Clone the BioME repository: git clone https://github.com/kmherman/BioME.git
 * Run the setup.py file to install software: python setup.py install
 * Create a conda environment to be used with this software: conda env create -q -n biome --file BioME_environment.yml
 * Activate this new conda environment: conda activate biome
   
-#### How to utilize the BioME software:
+
+### How to utilize the BioME software:
 1. Move to Biome/biome/ ("cd BioME/biome/")
 2. Execute the biome_run.py file by typing "python3 biome_run.py"
-3. Provide user input for prompts (input is case-sensitive)  
+3. Provide user input for prompts (input is case-sensitive; lists need to be comma-separated with no space)  
   * Machine learning algorithm abbreviations:
     * mlp1: Multilayer perceptron with 1 hidden layer
     * mlp3: Multilayer perceptron with 3 hidden layers
@@ -30,5 +32,5 @@ CSE583 Final Project
     * all: train and evaluate every machine learning algorithm available (all above)  
     (*for more information on these ML algorithms, see the attached GitHub page.)  
 
-#### Directory structure:
+### Directory structure:
 <img src="https://github.com/kmherman/BioME/blob/main/doc/images/repo_structure.PNG" width="700" />
