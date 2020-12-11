@@ -1,6 +1,13 @@
+"""
+This module contains unit tests for the Support Vector
+Classification (SVC) model.
+"""
+
+
 import unittest
-from sklearn.datasets import load_iris  # Sample dataset 
+from sklearn.datasets import load_iris  # Sample dataset
 import biome
+
 
 class UnitTests(unittest.TestCase):
 
@@ -13,7 +20,7 @@ class UnitTests(unittest.TestCase):
         """
         x_train = "A string"
         with self.assertRaises(TypeError):
-            model = biome.get_SVC(x_train, UnitTests.y_train)
+            biome.get_SVC(x_train, UnitTests.y_train)
 
     def test_data_size(self):
         """
@@ -21,7 +28,7 @@ class UnitTests(unittest.TestCase):
         """
         y_train = UnitTests.y_train[2:]  # Make y_train too short
         with self.assertRaises(ValueError):
-            model = biome.get_SVC(UnitTests.x_train, y_train)
+            biome.get_SVC(UnitTests.x_train, y_train)
 
 
 if __name__ == '__main__':
