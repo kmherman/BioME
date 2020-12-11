@@ -15,7 +15,7 @@ CSE583 Final Project
   
 #### How to utilize the BioME software:
 1. Move to Biome/biome/ ("cd BioME/biome/")
-2. Execute the biome.py file by typing "python3 biome.py"
+2. Execute the biome.py file by typing "python3 biome_run.py"
 3. Provide user input for prompts (input is case-sensitive)  
 
 ##### Machine learning algorithm abbreviations:
@@ -32,3 +32,4 @@ CSE583 Final Project
 (*for more information on these ML algorithms, see the attached GitHub page.)  
 
 #### Directory structure:
+<img src="https://github.com/kmherman/BioME/blob/main/doc/images/repo_structure.PNG" width="700" />
