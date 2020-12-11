@@ -3,10 +3,8 @@ unit test module for testing logistic regression
 use synthetic data to test
 
 """
-import os
-os.chdir('/home/george/cse583/BioME/biome')
+
 import logistic
-os.chdir('/home/george/cse583/BioME/biome/test')
 import unittest
 from sklearn.datasets import make_classification
 
