@@ -13,19 +13,19 @@ Component organization and interaction is relatively simple in BioME. With the e
     * Output: Randomly split test and training sets as OTU tables.
     * Interactions: The user interacts with this component to enter data. This component prompts the user for data and re-prompts if the data entered is not correctly formatted. This component then interacts with the Data pre-processor by returning a correctly formatted input file to the data pre-processor. As this component has already ensured the data type is correct, there is no need for the data pre-processor to interact with the data manager other than simply accepting its output.
 2. ### Data pre-processor
-    * <ins> Function:</ins> Feature that uses a dimensionality reduction algorithm to condense the data into fewer features (particularly useful for microbiome data which inherently is very sparse).
+    * <ins> Function:</ins> Feature that standardizes the training and test OTU data. For some algorithms, this component uses a dimensionality reduction algorithm (optional) to condense the data into fewer features (particularly useful for microbiome data which inherently is very sparse).
     * Input: .txt formatted test and train datasets.
-    * Output: Condensed OTU formatted datasets for use in models.
+    * Output: Standardized (and condensed; optional) OTU formatted datasets for use in models.
     * Interactions: This component simply accepts data from the data manager. As the data manager ensures that data is formatted correctly, there is no need for the data pre-processor to communicate with the manager. This  interacts with the model fitting component by returning a cleaned and condensed dataset for the model fitting component to begin training. This component can also pass the same data to an optional feature analysis component.
 3. ### Model fitting
     * <ins> Function:</ins> Read in OTU data and uses it to train a variety of machine learning models to most accurately fit the data.
     * Input: OTU formatted test and train datasets (can be condensed by the Data pre-processor component)
-    * Interactions: This component can be considered a set of subcomponents executing machine learning algorithms in parallel (although for practical purposes, they may be executed one after another). Each subcomponent accepts a copy of the cleaned dataset from the data pre-processor and begins training a specific machine learning model. Each subcomponent passes its fitted model and a loss function value for the model. The loss function is the same across all subcomponents to better compare them. The subcomponents never interact with each other.
+    * Interactions: This component can be considered a set of subcomponents executing machine learning algorithms in parallel (although for practical purposes, they may be executed one after another). Each subcomponent accepts a copy of the cleaned dataset from the data pre-processor and begins training a specific machine learning model. Each subcomponent passes its fitted model and a loss function value for the model. The subcomponents never interact with each other.
 4. ### Model selector
-    * <ins> Function:</ins> Trains each model (list specified by user; default: all) with the training set and calculates the accuracy using the test set. Returns the model with the highest accuracy and gives information on
-    * Input: Training set, test set, list of models to test
-    * Output: Trained models ordered by test accuracy
-    * Interactions: This component accepts loss function values from the various models. It selects the most accurate model based on these values, and returns the best model and loss function data to the user.
+    * <ins> Function:</ins> Evaluates the accuracy of each trained model (list specified by user) with the training set. Returns the model with the highest accuracy and allows the user to make a classification prediction on a new data point.
+    * Input: Models trained by model fitting components, test set, list of models to test
+    * Output: Trained models ordered by test accuracy, best-performing model that can be used to make a future prediction
+    * Interactions: This component evaluates the accuracy of the models trained by the model fitting components and ranks them by accuracy score. It selects the most accurate model based on these values, and returns a list of the models tested and their respective accuracy scores and the best-performing model.
 5. ### Feature analysis
     * <ins> Function:</ins> Provides reseachers with an analysis on feature importance. This gives insight into which bacteria are more indicative of a disease or disease subtype.
     * Input: Combined train and test data set.
@@ -51,9 +51,8 @@ A list of tasks in priority order.
 * Write function to randomly split data into training and test sets.
 * Implement machine learning algorithms using sci-kit learn or PyTorch.
 * Write unittests for code (continuously).
-* Add in optional dimensionality algorithm to utilize in ML models.
-* Add in feature extraction component with a visualization tool.
 * Add easy to use interface that allows user to select model for use (they can input data point and it'll return a predicted label)
+* Add in feature extraction component with a visualization tool.
 * Add feature thatprovides information on misclassifications from test data on model (ie. Which category is most frequently misclassified? Are there more false positive or false negatives?).
 
 ```python
