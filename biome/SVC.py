@@ -56,4 +56,5 @@ def get_SVC(x_train, y_train):
     clf_grid.fit(x_train, y_train)
     model = SVC(C=clf_grid.best_params_['C'], kernel='rbf',
                 gamma=clf_grid.best_params_['gamma'])
+    model.fit(x_train, y_train)
     return model
