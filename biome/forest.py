@@ -24,8 +24,8 @@ def random_forest(x_train, y_train):
     """
     simplefilter("ignore", category=ConvergenceWarning)
     model = RandomForestClassifier()
-    n_estimators = [10, 100, 1000]
-    max_features = ['auto', 'sqrt', 'log2']
+    n_estimators = [10, 100]
+    max_features = ['auto', 'sqrt']
     criterion = ['gini', 'entropy']
     grid = dict(n_estimators=n_estimators,
                 criterion=criterion,

@@ -9,6 +9,7 @@ from sklearn.linear_model import RidgeClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.model_selection import GridSearchCV
 from sklearn.exceptions import ConvergenceWarning
+from warnings import simplefilter
 
 
 def Ridge_regress(x_train, y_train):
@@ -25,8 +26,8 @@ def Ridge_regress(x_train, y_train):
     """
     simplefilter("ignore", category=ConvergenceWarning)
     model = RidgeClassifier()
-    solvers = ['auto', 'svd', 'cholesky', 'lsqr', 'sparse_cg', 'sag', 'saga']
-    alphas = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+    solvers = ['auto', 'svd']
+    alphas = [0.1, 0.2]
     grid = dict(solver=solvers, alpha=alphas)
     con_v = RepeatedStratifiedKFold(n_splits=10, n_repeats=3, random_state=1)
     grid_search = GridSearchCV(estimator=model,
