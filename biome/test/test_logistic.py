@@ -8,8 +8,6 @@ import unittest
 from sklearn.datasets import make_classification
 import biome
 
-
-
 class Test_logistic(unittest.TestCase):
     """
     unit test for knn_regression module, this class is inhered child class of

@@ -9,6 +9,7 @@ from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.model_selection import GridSearchCV
 from warnings import simplefilter
 from sklearn.exceptions import ConvergenceWarning
+import warnings
 
 
 def logistic_regress(x_train, y_train):
@@ -22,9 +23,10 @@ def logistic_regress(x_train, y_train):
         for each independent variable
     """
     simplefilter("ignore", category=ConvergenceWarning)
+    warnings.filterwarnings("ignore")
     model = LogisticRegression()
-    solvers = ['newton-cg', 'lbfgs']
-    penalties = ['l1', 'l2']
+    solvers = ['lbfgs']
+    penalties = ['none','l2']
     c_values = [10, 1.0]
     grid = dict(solver=solvers, penalty=penalties, C=c_values)
     con_v = RepeatedStratifiedKFold(n_splits=10,
