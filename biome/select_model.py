@@ -41,7 +41,7 @@ def get_trained_models(x_train, y_train, list_models):
 
     Returns:
     trained_models = list of all trained models
-    
+
     Raises exception when a model selected is not an available ML algorithm
     in BioME.
     """
