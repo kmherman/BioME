@@ -41,14 +41,22 @@ def get_trained_models(x_train, y_train, list_models):
 
     Returns:
     trained_models = list of all trained models
+    
+    Raises exception when a model selected is not an available ML algorithm
+    in BioME.
     """
+    available_models = ['mlp1', 'mlp3', 'lr', 'rr', 'svc', 'dtree', 'knn',
+                        'rf', 'gnb']
     trained_models = []
     y_train_num = np.argmax(y_train, 1)
     if 'all' in list_models:
-        list_models_all = ['mlp1', 'mlp3', 'lr', 'rr', 'svc', 'dtree', 'knn',
-                           'rf', 'gnb']
+        list_models_all = available_models
     else:
         list_models_all = list_models
+    if (set(list_models_all).issubset(set(available_models))):
+        pass
+    else:
+        raise ValueError('A model selected is not an available ML algorithm.')
     if 'mlp1' in list_models_all:
         params = train_nn1(x_train, y_train)
         trained_models.append(params)
