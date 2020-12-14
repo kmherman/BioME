@@ -60,7 +60,7 @@ class TestSelectModel(unittest.TestCase):
         x_test = x[80:, :]
         y_train = y_onehot[0:80, :]
         y_test = y_onehot[80:, :]
-        model_list = ['mlp1', 'mlp3', 'dtree', 'rr']
+        model_list = ['mlp1', 'mlp3', 'gnb', 'rf']
         best_model_info = biome.evaluate_rank_models(x_train, y_train, x_test,
                                                      y_test, model_list)
         self.assertTrue(isinstance(best_model_info, tuple))
@@ -92,3 +92,10 @@ class TestSelectModel(unittest.TestCase):
         """
         with self.assertRaises(ValueError):
             biome.get_trained_models(x, y_onehot, ['mlp2'])
+
+
+if __name__ == '__main__':
+    unittest.main()
+
+SUITE = unittest.TestLoader().loadTestsFromTestCase(TestSelectModel)
+_ = unittest.TextTestRunner().run(SUITE)
