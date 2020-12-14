@@ -9,7 +9,6 @@ from sklearn.linear_model import RidgeClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.model_selection import GridSearchCV
 from sklearn.exceptions import ConvergenceWarning
-from warnings import simplefilter
 
 
 def Ridge_regress(x_train, y_train):
