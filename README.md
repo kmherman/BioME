@@ -16,9 +16,10 @@ CSE583 Final Project
   
 
 ### How to utilize the BioME software:
-1. Move to Biome/biome/ ("cd BioME/biome/")
-2. Execute the biome_run.py file by typing "python3 biome_run.py"
-3. Provide user input for prompts (input is case-sensitive; lists need to be comma-separated with no space)  
+1. Install software (above)
+2. Move execution script to desired directory: "cp biome/scripts/biome_run.py dir_location"
+3. Execute the biome_run.py file by typing "python3 biome_run.py"
+4. Provide user input for prompts (input is case-sensitive; lists need to be comma-separated with no space)  
   * Machine learning algorithm abbreviations:
     * mlp1: Multilayer perceptron with 1 hidden layer
     * mlp3: Multilayer perceptron with 3 hidden layers
