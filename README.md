@@ -10,14 +10,15 @@ CSE583 Final Project
 
 ### Installation Instructions  
 * Clone the BioME repository: git clone https://github.com/kmherman/BioME.git
-* Run the setup.py file to install software: python setup.py install
+* Move into the BioME directory: cd BioME/
 * Create a conda environment to be used with this software: conda env create -q -n biome --file BioME_environment.yml
 * Activate this new conda environment: conda activate biome
+* Run the setup.py file to install software: python setup.py install
   
 
 ### How to utilize the BioME software:
 1. Install software (above)
-2. Move execution script to desired directory: "cp biome/scripts/biome_run.py dir_location"
+2. Move execution script to desired directory: "cp BioME/biome/scripts/biome_run.py dir_location"
 3. Execute the biome_run.py file by typing "python3 biome_run.py"
 4. Provide user input for prompts (input is case-sensitive; lists need to be comma-separated with no space)  
   * Machine learning algorithm abbreviations:
