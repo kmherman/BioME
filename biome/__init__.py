@@ -14,6 +14,7 @@ from .naive_bayes import GNB
 from .SVC import get_SVC
 from .ridge import Ridge_regress
 from .knn import knn
+from .dtree import decision_tree
 
 __all__ = [data_loader, get_one_hot, split_train_test, forward_nn1,
            forward_nn3, train_nn1, train_nn3, get_trained_models,
