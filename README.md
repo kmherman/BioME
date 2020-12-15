@@ -115,25 +115,7 @@ Some of these of models can take a long-time, which isn't to mean they aren't ex
   knn    | 2
   forest | 5
   gnb    | 4
-  
-
-  
-  
-
-### Directory structure:
-<img src="https://github.com/kmherman/BioME/blob/main/doc/images/repo_structure.PNG" width="700" />
-
-=======
-    * **mlp1**: Multilayer perceptron with 1 hidden layer
-    * **mlp3**: Multilayer perceptron with 3 hidden layers
-    * **lr**: logistic regression
-    * **rr**: ridge classifier (L2 regularizer)
-    * **dtree**: decision tree
-    * **svc**: support vector classifier
-    * **knn**: k-nearest neighbors algorithm (implemented with PCA)
-    * **forest**: random forest
-    * **gnb**: Gaussian Naive-Bayes
-    * **all**: train and evaluate every machine learning algorithm available (all above)
+ 
 ###### For more information on these ML algorithms, see the [Project Homepage](https://kmherman.github.io/BioME/)
 
 ```
@@ -164,4 +146,4 @@ ___
 ### Directory Structure:
 <img src="https://github.com/kmherman/BioME/blob/main/doc/images/biome_repo_structure.PNG" width="600" />
 
->>>>>>> eb8f7d9cddcf91a2414e3ffef94bd7d61c11d047
+>eb8f7d9cddcf91a2414e3ffef94bd7d61c11d047
