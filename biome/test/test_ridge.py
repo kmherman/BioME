@@ -6,7 +6,9 @@ use synthetic data to test
 
 import unittest
 from sklearn.datasets import make_classification
+
 import biome
+
 
 class Test_ridge(unittest.TestCase):
     """

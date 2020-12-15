@@ -7,6 +7,9 @@ train_nn1 -- function that trains single layer MLP with CV and returns
 optimized parameters for model
 train_nn3 -- function that trains three layer MLP with CV and returns
 optimized parameters for model
+
+For each architecture, the hidden layer sizes and convergence criteria
+are adjustable.
 """
 
 import numpy as np
@@ -59,7 +62,7 @@ def forward_nn3(x_data, w_0, w_1, w_2, w_3, b_0, b_1, b_2, b_3):
     return predictions
 
 
-def train_nn1(x_train, y_train, h_0=100):
+def train_nn1(x_train, y_train, h_0=100, cv_err_thresh=0.05, err_thresh=0.05):
     """
     This function trains the single layer MLP using the Adams optimizer and
     cross entropy loss. K-fold cross validation is also implemented to help
@@ -69,6 +72,10 @@ def train_nn1(x_train, y_train, h_0=100):
     x_train = numpy array of training OTU data
     y_train = numpy array of one-hot encoded classification data
     h_0 = size of single hidden layer (default=100)
+    cv_err_thresh = threshold for cross validation error to fall under
+    to halt training and prevent overfitting (default=0.05)
+    err_thresh = threshold for training error to fall under before testing
+    model on CV set (default=0.05)
 
     Returns:
     params = torch tensors of optimized weights and biases for MLP.
@@ -91,14 +98,14 @@ def train_nn1(x_train, y_train, h_0=100):
     x_train_torch = torch.from_numpy(x_train_64)
     y_train_torch = torch.from_numpy(y_train).type(torch.LongTensor)
     cv_error = 100
-    while cv_error > 0.05:
+    while cv_error > cv_err_thresh:
         rand = torch.randperm(num_train)
         x_train_batch = x_train_torch[rand[0:int((8/9)*num_train)]]
         y_train_batch = y_train_torch[rand[0:int((8/9)*num_train)]]
         x_train_cv = x_train_torch[rand[int((8/9)*num_train):]]
         y_train_cv = y_train_torch[rand[int((8/9)*num_train):]]
         train_error = 100
-        while train_error > 0.05:
+        while train_error > err_thresh:
             model_output = forward_nn1(x_train_batch, w_0, w_1, b_0, b_1)
             optimizer = optim.Adam([w_0, w_1, b_0, b_1], lr=0.001,
                                    weight_decay=0.00001)
@@ -130,7 +137,8 @@ def train_nn1(x_train, y_train, h_0=100):
     return (w_0, w_1, b_0, b_1)
 
 
-def train_nn3(x_train, y_train, h_0=50, h_1=50, h_2=50):
+def train_nn3(x_train, y_train, h_0=50, h_1=50, h_2=50, cv_thresh=0.05,
+              err_thresh=0.05):
     """
     This function trains the three layer MLP using the Adams optimizer and
     cross entropy loss. K-fold cross validation is also implemented to help
@@ -142,6 +150,10 @@ def train_nn3(x_train, y_train, h_0=50, h_1=50, h_2=50):
     h_0 = size of first hidden layer (default=50)
     h_1 = size of second hidden layer (default=50)
     h_2 = size of third hidden layer (default=50)
+    cv_thresh = threshold for cross validation training convergence
+    (default=0.05)
+    err_thresh = threshfold for training error to fall under before testing
+    model on CV set (default=0.05)
 
     Returns:
     params = torch tensors of optimized weights and biases for MLP.
@@ -174,14 +186,14 @@ def train_nn3(x_train, y_train, h_0=50, h_1=50, h_2=50):
     x_train_torch = torch.from_numpy(x_train_64)
     y_train_torch = torch.from_numpy(y_train).type(torch.LongTensor)
     cv_error = 100
-    while cv_error > 0.05:
+    while cv_error > cv_thresh:
         rand = torch.randperm(num_train)
         x_train_batch = x_train_torch[rand[0:int((8/9)*num_train)]]
         y_train_batch = y_train_torch[rand[0:int((8/9)*num_train)]]
         x_train_cv = x_train_torch[rand[int((8/9)*num_train):]]
         y_train_cv = y_train_torch[rand[int((8/9)*num_train):]]
         train_error = 100
-        while train_error > 0.05:
+        while train_error > err_thresh:
             model_output = forward_nn3(x_train_batch, w_0, w_1, w_2, w_3, b_0,
                                        b_1, b_2, b_3)
             optimizer = optim.Adam([w_0, w_1, w_2, w_3, b_0, b_1, b_2, b_3],

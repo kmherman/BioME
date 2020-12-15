@@ -26,7 +26,7 @@ def logistic_regress(x_train, y_train):
     warnings.filterwarnings("ignore")
     model = LogisticRegression()
     solvers = ['lbfgs']
-    penalties = ['none','l2']
+    penalties = ['none', 'l2']
     c_values = [10, 1.0]
     grid = dict(solver=solvers, penalty=penalties, C=c_values)
     con_v = RepeatedStratifiedKFold(n_splits=10,

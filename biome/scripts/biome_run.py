@@ -10,11 +10,7 @@ To run script: python3 biome.py
 import pandas as pd
 from sklearn import preprocessing
 
-from prep_split_data import data_loader
-from prep_split_data import get_one_hot
-from prep_split_data import split_train_test
-from select_model import evaluate_rank_models
-from select_model import get_prediction
+import biome
 
 print('                                                          ***********'
       '                     ')
@@ -78,15 +74,16 @@ model_list = list(input(
     'tested: ').split(','))
 print('')
 
-x_data, y_data = data_loader(OTU_path, metadata_path)
-y_output = get_one_hot(category_labels, y_data)
-x_train_unscale, x_test_unscale, y_train, y_test = split_train_test(x_data,
-                                                                    y_output)
+x_data, y_data = biome.data_loader(OTU_path, metadata_path)
+y_output = biome.get_one_hot(category_labels, y_data)
+x_train_unscale, x_test_unscale, y_train, y_test =\
+        biome.split_train_test(x_data, y_output)
 scaler = preprocessing.StandardScaler().fit(x_train_unscale)
 x_train = scaler.transform(x_train_unscale)
 x_test = scaler.transform(x_test_unscale)
 
-model_out = evaluate_rank_models(x_train, y_train, x_test, y_test, model_list)
+model_out = biome.evaluate_rank_models(x_train, y_train, x_test,
+                                       y_test, model_list)
 
 model_name = model_out[0]
 best_model = model_out[1]
@@ -101,7 +98,8 @@ while yes_no == 'yes' or yes_no == 'Yes':
     query_data_pd = pd.read_table(query_path, index_col=0).T
     query_data = query_data_pd.to_numpy()
     query_data_scale = scaler.transform(query_data)
-    get_prediction(query_data_scale, model_name, best_model, category_labels)
+    biome.get_prediction(query_data_scale, model_name, best_model,
+                         category_labels)
     print('')
     yes_no = input('Would you like to make another prediction? ')
     print('')

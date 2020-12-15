@@ -7,8 +7,21 @@ import unittest
 
 import numpy as np
 import torch
+from sklearn.datasets import make_classification
 
 import biome
+
+x, y = make_classification()
+x = np.array(x)
+y = np.array(y)
+y_data = []
+for i in range(len(y)):
+    if y[i] == 1:
+        y_data.append(['cat'])
+    else:
+        y_data.append(['dog'])
+y_np = np.array(y_data)
+y_onehot = biome.get_one_hot(['cat', 'dog'], y_np)
 
 
 class TestTrainMLP(unittest.TestCase):
@@ -52,9 +65,7 @@ class TestTrainMLP(unittest.TestCase):
         Smoke test on train_nn1 to ensure that tuple of parameters
         is returned from training function.
         """
-        x_data = np.array([[0, 1, 5, 10], [7, 2, 4, 7]])
-        y_data = np.array([[1, 0], [0, 1]])
-        output = biome.train_nn1(x_data, y_data, h_0=2)
+        output = biome.train_nn1(x, y_onehot, h_0=20)
         self.assertTrue(isinstance(output, tuple))
 
     def test_smoke2(self):
@@ -62,9 +73,7 @@ class TestTrainMLP(unittest.TestCase):
         Smoke test on train_nn3 to ensure that tuple of parameters
         is returned from training function.
         """
-        x_data = np.array([[0, 1, 5, 10], [7, 2, 4, 7]])
-        y_data = np.array([[1, 0], [0, 1]])
-        output = biome.train_nn3(x_data, y_data, h_0=2, h_1=2, h_2=2)
+        output = biome.train_nn3(x, y_onehot, h_0=10, h_1=10, h_2=10)
         self.assertTrue(isinstance(output, tuple))
 
 
