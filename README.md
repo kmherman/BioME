@@ -3,11 +3,19 @@
 <img src="https://github.com/kmherman/BioME/blob/main/doc/Biomelogo.png" width="200" />
 CSE583 Final Project
 
+___
+### Brief Background
 
+
+#### The Data:
+Four open source microbiome datasets were obtained and processed in Qiita [[15]](#15). The full bioinformatic pipeline was conducted in Qiita with QIIME2 [[14]](#14) and can be  found [here](https://qiita.ucsd.edu/analysis/description/32520/).
+
+*Interested in learning a bit more? Check out our Homepage!
+&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;
 |[Project Homepage](https://kmherman.github.io/BioME/)|
 |---|
-
 ___
+
 ### Installation Instructions
 ##### This package assumes you have [Anaconda/Miniconda](https://docs.conda.io/en/latest/miniconda.html) and [git](https://github.com/git-guides/install-git) installed prior to starting!
 
