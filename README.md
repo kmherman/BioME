@@ -90,7 +90,6 @@ Healthy Humans (**HC**) and individuals with either Crohn's Disease (**CD**), Ul
 
 Some of these of models can take a long-time, which isn't to mean they aren't excellent options to run! But for the tutorial we will only run a few. Remember, no spaces!
   * Machine learning algorithm abbreviations:
-<<<<<<< HEAD
     * **mlp1**: Multilayer perceptron with 1 hidden layer
     * **mlp3**: Multilayer perceptron with 3 hidden layers
     * **lr**: logistic regression
