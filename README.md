@@ -11,7 +11,7 @@ Making supervised machine learning accessible to non-data scientists interested 
 #### The Data:
 Four open source microbiome datasets were obtained and processed in Qiita [[1]](#1). The full bioinformatic pipeline was conducted in Qiita with QIIME2 [[2]](#2) and can be  found [here](https://qiita.ucsd.edu/analysis/description/32520/), and more information on the datasets as a whole can be found in the [Functional Specifications](https://github.com/kmherman/BioME/blob/main/doc/FunctionalSpec.md), [Component Specifications](https://github.com/kmherman/BioME/blob/main/doc/ComponentSpec.md), and our Homepage!
 
-&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;
+&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;
 |[Project Homepage](https://kmherman.github.io/BioME/)|
 |---|
 ___
