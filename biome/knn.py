@@ -15,6 +15,10 @@ def knn(x_train, y_train):
     X_train = pca.fit_transform(x_train)
     '# Create KNN classifier'
     N = int(input("enter number of neighbors: "))
+    if type(N) != int:
+        raise ValueError("Number of neighbors must be a positive integer")
+    if N < 1:
+        raise ValueError("N must be a positive integer")
     knn = KNeighborsClassifier(n_neighbors=N)
     '# Fit the classifier to the data'
     model = knn.fit(X_train, y_train)

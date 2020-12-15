@@ -13,8 +13,9 @@ from .forest import random_forest
 from .naive_bayes import GNB
 from .SVC import get_SVC
 from .ridge import Ridge_regress
+from .knn import knn
 
 __all__ = [data_loader, get_one_hot, split_train_test, forward_nn1,
            forward_nn3, train_nn1, train_nn3, get_trained_models,
            evaluate_rank_models, logistic_regress, random_forest,
-           GNB, get_SVC, get_prediction, Ridge_regress]
+           GNB, get_SVC, get_prediction, Ridge_regress, knn]
