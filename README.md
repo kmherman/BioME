@@ -30,7 +30,24 @@ CSE583 Final Project
     * forest: random forest
     * gnb: Gaussian Naive-Bayes
     * all: train and evaluate every machine learning algorithm available (all above)  
-    (*for more information on these ML algorithms, see the attached GitHub page.)  
+    (*for more information on these ML algorithms, see the attached GitHub page.) 
+
+  <em>How fast does each algorithm run?</em>
+  Algorithm | Rank<sup>* 
+  ----------|-----
+  mlp1   | 7
+  mlp3   | 8
+  lr     | 3
+  rr     | 1
+  dtree  | 9
+  svc    | 6
+  knn    | 2
+  forest | 5
+  gnb    | 4
+  
+
+  
+  
 
 ### Directory structure:
 <img src="https://github.com/kmherman/BioME/blob/main/doc/images/repo_structure.PNG" width="700" />
