@@ -5,13 +5,13 @@ CSE583 Final Project
 
 ___
 ### Brief Background
-
+#### The Problem Addressed:
+Making supervised machine learning accessible to non-data scientists interested in microbiome research.
 
 #### The Data:
-Four open source microbiome datasets were obtained and processed in Qiita [[15]](#15). The full bioinformatic pipeline was conducted in Qiita with QIIME2 [[14]](#14) and can be  found [here](https://qiita.ucsd.edu/analysis/description/32520/).
+Four open source microbiome datasets were obtained and processed in Qiita [[1]](#1). The full bioinformatic pipeline was conducted in Qiita with QIIME2 [[2]](#2) and can be  found [here](https://qiita.ucsd.edu/analysis/description/32520/), and more information on the datasets as a whole can be found in the [Functional Specifications](https://github.com/kmherman/BioME/blob/main/doc/FunctionalSpec.md), [Component Specifications](https://github.com/kmherman/BioME/blob/main/doc/ComponentSpec.md), and our Homepage!
 
-*Interested in learning a bit more? Check out our Homepage!
-&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;
+&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;
 |[Project Homepage](https://kmherman.github.io/BioME/)|
 |---|
 ___
@@ -33,7 +33,7 @@ $ cd Desktop
 $ git clone https://github.com/kmherman/BioME.git
 $ cd BioME
 ```
-Now take a look on your desktop screen. You'll now see the BioME file! __*Magic*__
+Now take a look on your desktop screen. You'll now see the BioME file!
 #### Step 3: Finish the install.
 Now we just need to run the "setup .py" and you are good to go!
 >Note: once this installs, you should be able to run the command from anywhere on your computer as long as **biome_env** is activated!
@@ -88,7 +88,7 @@ In the prompt write:
 #### Step 3: Please list the categorical variables of interest:
 (Provide the categories that will be used for classification)
 In this instance, we will be using the "ML_diagnosis" column in the metadata file.
-Healthy Humans (**HC**) and individuals with either Crohn's Disease (**CD**), Ulcerative Colitis (**UC**), Collagenous Colitis (**CC**), or Ileal Crohn's disease (**IC**).
+Healthy Humans (**HC**) and individuals with either Crohn's Disease (**CD**), Ulcerative Colitis (**UC**), Collagenous Colitis (**CC**), or Ileal Crohn's disease (**IC**). Full collection, DNA extraction, and 16sRNA amplicon sequencing methodologies for each study can be found in the provided papers [[3-5]](#3-5).
 >Lists need to be comma-separated with no spaces
 
 ```
@@ -107,10 +107,10 @@ Some of these of models can take a long-time, which isn't to mean they aren't ex
     * **knn**: k-nearest neighbors algorithm (implemented with PCA)
     * **forest**: random forest
     * **gnb**: Gaussian Naive-Bayes
-    * **all**: train and evaluate every machine learning algorithm available (all above)  
+    * **all**: train and evaluate every machine learning algorithm available (all above)
 
   <em>How fast does each algorithm run?</em>
-  Algorithm | Rank<sup>* 
+  Algorithm | Rank<sup>*
   ----------|-----
   mlp1   | 7
   mlp3   | 8
@@ -121,7 +121,7 @@ Some of these of models can take a long-time, which isn't to mean they aren't ex
   knn    | 2
   forest | 5
   gnb    | 4
- 
+
 ###### *For more information on these ML algorithms, see the [Project Homepage](https://kmherman.github.io/BioME/)
 
 ```
@@ -152,4 +152,16 @@ ___
 ### Directory Structure:
 <img src="https://github.com/kmherman/BioME/blob/main/doc/images/biome_repo_structure.PNG" width="600" />
 
->eb8f7d9cddcf91a2414e3ffef94bd7d61c11d047
+
+### References:
+<a id="1">[1]</a>  Bolyen E, Rideout JR, Dillon MR, Bokulich NA, Abnet CC, Al-Ghalith GA, Alexander H, Alm EJ, Arumugam M, Asnicar F, Bai Y, Bisanz JE, Bittinger K, Brejnrod A, Brislawn CJ, Brown CT, Callahan BJ, Caraballo-Rodríguez AM, Chase J, Cope EK, Da Silva R, Diener C, Dorrestein PC, Douglas GM, Durall DM, Duvallet C, Edwardson CF, Ernst M, Estaki M, Fouquier J, Gauglitz JM, Gibbons SM, Gibson DL, Gonzalez A, Gorlick K, Guo J, Hillmann B, Holmes S, Holste H, Huttenhower C, Huttley GA, Janssen S, Jarmusch AK, Jiang L, Kaehler BD, Kang KB, Keefe CR, Keim P, Kelley ST, Knights D, Koester I, Kosciolek T, Kreps J, Langille MGI, Lee J, Ley R, Liu YX, Loftfield E, Lozupone C, Maher M, Marotz C, Martin BD, McDonald D, McIver LJ, Melnik AV, Metcalf JL, Morgan SC, Morton JT, Naimey AT, Navas-Molina JA, Nothias LF, Orchanian SB, Pearson T, Peoples SL, Petras D, Preuss ML, Pruesse E, Rasmussen LB, Rivers A, Robeson MS, Rosenthal P, Segata N, Shaffer M, Shiffer A, Sinha R, Song SJ, Spear JR, Swafford AD, Thompson LR, Torres PJ, Trinh P, Tripathi A, Turnbaugh PJ, Ul-Hasan S, van der Hooft JJJ, Vargas F, Vázquez-Baeza Y, Vogtmann E, von Hippel M, Walters W, Wan Y, Wang M, Warren J, Weber KC, Williamson CHD, Willis AD, Xu ZZ, Zaneveld JR, Zhang Y, Zhu Q, Knight R, and Caporaso JG. **Reproducible, interactive, scalable and extensible microbiome data science using QIIME 2**. 2019. Nature Biotechnology 37: 852–857. https://doi.org/10.1038/s41587-019-0209-9
+[QIIME2 website](qiime2.org)
+
+ <a id="2">[2]</a> Antonio Gonzalez, Jose A. Navas-Molina, Tomasz Kosciolek, Daniel McDonald, Yoshiki Vázquez-Baeza, Gail Ackermann, Jeff DeReus, Stefan Janssen, Austin D. Swafford, Stephanie B. Orchanian, Jon G. Sanders, Joshua Shorenstein, Hannes Holste, Semar Petrus, Adam Robbins-Pianka, Colin J. Brislawn, Mingxun Wang, Jai Ram Rideout, Evan Bolyen, Matthew Dillon, J. Gregory Caporaso, Pieter C. Dorrestein & Rob Knight. **Qiita: rapid, web-enabled microbiome meta-analysis**. Nature Methods, volume 15, pages 796–798 (2018); https://doi.org/10.1038/s41592-018-0141-9
+[Qiita website](https://qiita.ucsd.edu/)
+
+<a id="3">[3]</a> Gevers D, Kugathasan S, Denson LA, Vázquez-Baeza Y, Van Treuren W, Ren B, Schwager E, Knights D, Song SJ, Yassour M, Morgan XC, Kostic AD, Luo C, González A, McDonald D, Haberman Y, Walters T, Baker S, Rosh J, Stephens M, Heyman M, Markowitz J, Baldassano R, Griffiths A, Sylvester F, Mack D, Kim S, Crandall W, Hyams J, Huttenhower C, Knight R, Xavier RJ.**The treatment-naive microbiome in new-onset Crohn's disease. Cell Host Microbe.**. 2014 Mar 12;15(3):382-392. doi: 10.1016/j.chom.2014.02.005. PMID: 24629344; PMCID: PMC4059512. https://pubmed.ncbi.nlm.nih.gov/24629344/
+
+<a id="4">[4]</a> Daniel McDonald, Embriette Hyde, Justine W. Debelius, James T. Morton, Antonio Gonzalez, Gail Ackermann, Alexander A. Aksenov, Bahar Behsaz, Caitriona Brennan, Yingfeng Chen, Lindsay DeRight Goldasich, Pieter C. Dorrestein, Robert R. Dunn, Ashkaan K. Fahimipour, James Gaffney, Jack A. Gilbert, Grant Gogul, Jessica L. Green, Philip Hugenholtz, Greg Humphrey, Curtis Huttenhower, Matthew A. Jackson, Stefan Janssen, Dilip V. Jeste, Lingjing Jiang, Scott T. Kelley, Dan Knights, Tomasz Kosciolek, Joshua Ladau, Jeff Leach, Clarisse Marotz, Dmitry Meleshko, Alexey V. Melnik, Jessica L. Metcalf, Hosein Mohimani, Emmanuel Montassier, Jose Navas-Molina, Tanya T. Nguyen, Shyamal Peddada, Pavel Pevzner, Katherine S. Pollard, Gholamali Rahnavard, Adam Robbins-Pianka, Naseer Sangwan, Joshua Shorenstein, Larry Smarr, Se Jin Song, Timothy Spector, Austin D. Swafford, Varykina G. Thackray, Luke R. Thompson, Anupriya Tripathi, Yoshiki Vázquez-Baeza, Alison Vrbanac, Paul Wischmeyer, Elaine Wolfe, Qiyun Zhu, The American Gut Consortium, Rob Knight. **American Gut: an Open Platform for Citizen Science Microbiome Research**. mSystems May 2018, 3 (3) e00031-18; DOI: 10.1128/mSystems.00031-18 https://msystems.asm.org/content/3/3/e00031-18
+
+<a id="5">[5]</a> Halfvarson, J., Brislawn, C., Lamendella, R. et al. **Dynamics of the human gut microbiome in inflammatory bowel disease**.  Nat Microbiol 2, 17004 (2017). https://doi.org/10.1038/nmicrobiol.2017.4
