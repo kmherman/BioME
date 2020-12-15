@@ -11,7 +11,7 @@ ___
 ### Installation Instructions
 ##### This package assumes you have [Anaconda/Miniconda](https://docs.conda.io/en/latest/miniconda.html) and [git](https://github.com/git-guides/install-git) installed prior to starting!
 
-##### Step 1: create a new environment.
+##### Step 1: Create a new environment.
 In your terminal you will type:
 ```
 $ conda create -n biome_env python=3
@@ -19,7 +19,7 @@ $ conda create -n biome_env python=3
 In the above code, I have created a new environment and named it **biome_env** while also specifying that I want to be using python version 3 (incase you have both installed).
 
 ##### Step 2: Cloning the BioME repository.
-In the terminal we will first active our new environment **biome_env**, change our directory, and then clone the repo! For this tutorial, I will be cloning the BioME to my Desktop. If you aren't sure where you are in your computer, don't worry! type **pwd** (this means *print working directory*) into the terminal. This will tell you where you are! Now that might not be very helpful if you don't know whats in the directory! Type **ls** (*list*) in the terminal. This will tell you what is *in* your terminal. Once you have figured out where you are you can now use **cd** which means *change directory*. In this case, I'm just moving "forward" into a folder in this directory (my desktop!). We will then move into the
+In the terminal we will first active our new environment **biome_env**, change our directory, and then clone the repo! For this tutorial, I will be cloning the BioME to my Desktop. If you aren't sure where you are in your computer, don't worry! Type **pwd** (this means *print working directory*) into the terminal. This will tell you where you are! Now that might not be very helpful if you don't know whats in the directory! Type **ls** (*list*) in the terminal. This will tell you what is *in* your terminal. Once you have figured out where you are you can now use **cd** which means *change directory*. In this case, I'm just moving "forward" into a folder in this directory (my desktop!). We will then move into the
 ```
 $ conda activate BioME_env
 $ cd Desktop
