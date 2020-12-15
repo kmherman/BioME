@@ -91,17 +91,16 @@ Healthy Humans (**HC**) and individuals with either Crohn's Disease (**CD**), Ul
 Some of these of models can take a long-time, which isn't to mean they aren't excellent options to run! But for the tutorial we will only run a few. Remember, no spaces!
   * Machine learning algorithm abbreviations:
 <<<<<<< HEAD
-    * mlp1: Multilayer perceptron with 1 hidden layer
-    * mlp3: Multilayer perceptron with 3 hidden layers
-    * lr: logistic regression
-    * rr: ridge classifier (L2 regularizer)
-    * dtree: decision tree
-    * svc: support vector classifier
-    * knn: k-nearest neighbors algorithm (implemented with PCA)
-    * forest: random forest
-    * gnb: Gaussian Naive-Bayes
-    * all: train and evaluate every machine learning algorithm available (all above)  
-    (*for more information on these ML algorithms, see the attached GitHub page.) 
+    * **mlp1**: Multilayer perceptron with 1 hidden layer
+    * **mlp3**: Multilayer perceptron with 3 hidden layers
+    * **lr**: logistic regression
+    * **rr**: ridge classifier (L2 regularizer)
+    * **dtree**: decision tree
+    * **svc**: support vector classifier
+    * **knn**: k-nearest neighbors algorithm (implemented with PCA)
+    * **forest**: random forest
+    * **gnb**: Gaussian Naive-Bayes
+    * **all**: train and evaluate every machine learning algorithm available (all above)  
 
   <em>How fast does each algorithm run?</em>
   Algorithm | Rank<sup>* 
@@ -116,7 +115,7 @@ Some of these of models can take a long-time, which isn't to mean they aren't ex
   forest | 5
   gnb    | 4
  
-###### For more information on these ML algorithms, see the [Project Homepage](https://kmherman.github.io/BioME/)
+###### *For more information on these ML algorithms, see the [Project Homepage](https://kmherman.github.io/BioME/)
 
 ```
 : dtree,mlp1,mlp3
