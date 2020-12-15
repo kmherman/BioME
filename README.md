@@ -49,7 +49,7 @@ We are going to assume that you are still in the BioME directory from above, but
 ```
 $ biome_run.py
 ```
-It might take a minute, but soon you should see something like this:
+###### It might take a minute, but soon you should see something like this:
 <img src="https://github.com/kmherman/BioME/blob/main/doc/images/biome.png" width="600" />
 
 *Beautiful*
@@ -88,7 +88,7 @@ Healthy Humans (**HC**) and individuals with either Crohn's Disease (**CD**), Ul
 : HC,CD,UC,CC,IC
 ```
 #### Step 4: What models would you like to test?
-###### For more information on these ML algorithms, see the [Project Homepage](https://kmherman.github.io/BioME/)
+
   * Machine learning algorithm abbreviations:
     * **mlp1**: Multilayer perceptron with 1 hidden layer
     * **mlp3**: Multilayer perceptron with 3 hidden layers
@@ -100,6 +100,7 @@ Healthy Humans (**HC**) and individuals with either Crohn's Disease (**CD**), Ul
     * **forest**: random forest
     * **gnb**: Gaussian Naive-Bayes
     * **all**: train and evaluate every machine learning algorithm available (all above)
+###### For more information on these ML algorithms, see the [Project Homepage](https://kmherman.github.io/BioME/)
 
 Some of these of models can take a long-time, which isn't to mean they aren't excellent options to run! But for the tutorial we will only run a few. Remember, no spaces!
 ```
