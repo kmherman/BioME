@@ -122,6 +122,7 @@ Some of these of models can take a long-time, which isn't to mean they aren't ex
 
 ### Directory structure:
 <img src="https://github.com/kmherman/BioME/blob/main/doc/images/repo_structure.PNG" width="700" />
+
 =======
     * **mlp1**: Multilayer perceptron with 1 hidden layer
     * **mlp3**: Multilayer perceptron with 3 hidden layers
@@ -162,4 +163,5 @@ Check out the Demo at the [Project Homepage](https://kmherman.github.io/BioME/)!
 ___
 ### Directory Structure:
 <img src="https://github.com/kmherman/BioME/blob/main/doc/images/biome_repo_structure.PNG" width="600" />
+
 >>>>>>> eb8f7d9cddcf91a2414e3ffef94bd7d61c11d047
