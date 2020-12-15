@@ -35,4 +35,4 @@ CSE583 Final Project
     (*for more information on these ML algorithms, see the attached GitHub page.)  
 
 ### Directory structure:
-<img src="https://github.com/kmherman/BioME/blob/main/doc/images/repo_structure.PNG" width="700" />
+<img src="https://github.com/kmherman/BioME/blob/main/doc/images/biome_repo_structure.PNG" width="600" />
