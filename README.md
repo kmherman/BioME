@@ -12,7 +12,6 @@ ___
 ##### This package assumes you have [Anaconda/Miniconda](https://docs.conda.io/en/latest/miniconda.html) and [git](https://github.com/git-guides/install-git) installed prior to starting!
 
 #### Step 1: Create a new environment.
-In your terminal you will type:
 ```
 $ conda create -n biome_env python=3
 ```
