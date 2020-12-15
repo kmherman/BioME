@@ -9,12 +9,15 @@ Once thought only to be pathogenic, the microorganisms living on and within an a
 While microbial shifts have been implicated in numerous human ailments (e.g., obesity, anxiety, inflammatory bowel disease) [[6-8]](#6-8), research has thus far been limited to differentiating microbial communities between groups and less for predictive uses. Therefore, the ability for researchers and medical staff alike to be able to predict a sample's particular status based on microbial composition could further advance our understanding of host-microbiome interactions. Further, as a result of an ever expanding microbiome data availability, microbiome research lends itself to advancement with supervised machine learning [[9]](#9).
 <img align="right" src="https://github.com/kmherman/BioME/blob/main/doc/images/helps.png" width="200"/>With the use of supervised machine learning tools such as BioME, models trained on a dataset of samples with known labels, can be used to predict the labels of unknown samples which could be of particular use in areas such as predicting of disease/susceptibility, sample collection site or even species from which the sample came from [[10]](#10). However, the implementation of machine learning in microbiome research might feel daunting and time consuming to those outside of the realm of data science. Further, determining which machine learning algorithms to use can also be difficult.
 To address these challenges, we developed a tool that implements and compares the performance of:
-* K-Nearest Neighbor
-* Neural Networks
-* Logistic Regression
-* Support Vector Machine
-* Decision Tree
-* Random Forest
+* **mlp1**: Multilayer perceptron with 1 hidden layer
+    * **mlp3**: Multilayer perceptron with 3 hidden layers
+    * **lr**: logistic regression
+    * **rr**: ridge classifier (L2 regularizer)
+    * **dtree**: decision tree
+    * **svc**: support vector classifier
+    * **knn**: k-nearest neighbors algorithm (implemented with PCA)
+    * **forest**: random forest
+    * **gnb**: Gaussian Naive-Bayes
 
 algorithm to perform feature selection on microbiome data and provide the most accurate model for non-data science researchers to utilize for predicting sample characteristics based on on 16S rRNA microbiome composition data. Here, we applied the tool to analyze fecal microbiome (16S rRNA gene profiles) data collected from healthy humans **(HC)** and individuals with either Crohn's disease **(CD)**, Ulcerative colitis **(UC)**, Collagenous Colitis (**CC**), or Ileal Crohn's disease **(IC)** [[11-13]](#11-13) to display the tools capabilities.
 <p align="center">
