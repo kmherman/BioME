@@ -89,6 +89,7 @@ Healthy Humans (**HC**) and individuals with either Crohn's Disease (**CD**), Ul
 ```
 #### Step 4: What models would you like to test?
 
+Some of these of models can take a long-time, which isn't to mean they aren't excellent options to run! But for the tutorial we will only run a few. Remember, no spaces!
   * Machine learning algorithm abbreviations:
     * **mlp1**: Multilayer perceptron with 1 hidden layer
     * **mlp3**: Multilayer perceptron with 3 hidden layers
@@ -102,7 +103,6 @@ Healthy Humans (**HC**) and individuals with either Crohn's Disease (**CD**), Ul
     * **all**: train and evaluate every machine learning algorithm available (all above)
 ###### For more information on these ML algorithms, see the [Project Homepage](https://kmherman.github.io/BioME/)
 
-Some of these of models can take a long-time, which isn't to mean they aren't excellent options to run! But for the tutorial we will only run a few. Remember, no spaces!
 ```
 : dtree,mlp1,mlp3
 ```
