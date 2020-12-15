@@ -16,7 +16,7 @@ To address these challenges, we developed a tool that implements and compares th
 * Decision Tree
 * Random Forest
 
-algorithm to perform feature selection on microbiome data and provide the most accurate model for non-data science researchers to utilize for predicting sample characteristics based on on 16S rRNA microbiome composition data. Here, we applied the tool to analyze fecal microbiome (16S rRNA gene profiles) data collected from healthy humans **(HC)** and individuals with either Crohn's disease **(CD)**, Ulcerative colitis **(UC)**, or Ileal Crohn's disease **(IC)** [[11-13]](#11-13) to display the tools capabilities.
+algorithm to perform feature selection on microbiome data and provide the most accurate model for non-data science researchers to utilize for predicting sample characteristics based on on 16S rRNA microbiome composition data. Here, we applied the tool to analyze fecal microbiome (16S rRNA gene profiles) data collected from healthy humans **(HC)** and individuals with either Crohn's disease **(CD)**, Ulcerative colitis **(UC)**, Collagenous Colitis (**CC**), or Ileal Crohn's disease **(IC)** [[11-13]](#11-13) to display the tools capabilities.
 <p align="center">
 <img src="https://github.com/kmherman/BioME/blob/main/doc/images/super.png" width="500">
 </p>
