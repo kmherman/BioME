@@ -7,7 +7,7 @@ CSE583 Final Project
 |[Project Homepage](https://kmherman.github.io/BioME/)|
 |---|
 
-
+___
 ### Installation Instructions
 ##### This package assumes you have [Anaconda/Miniconda](https://docs.conda.io/en/latest/miniconda.html) and [git](https://github.com/git-guides/install-git) installed prior to starting!
 
@@ -36,7 +36,7 @@ $ python setup.py install
 ###### You're now ready to go!
 
 
-
+___
 ### BioME Tutorial:
 For this tutorial we will be using the data from provided in BioME. You can get an over view of the directory structure below &downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;&downarrow;
 
@@ -124,5 +124,6 @@ Don't want the tutorial to end?
 Check out the Demo at the [Project Homepage](https://kmherman.github.io/BioME/)!
 
 >Enjoy!
+___
 ### Directory Structure:
 <img src="https://github.com/kmherman/BioME/blob/main/doc/images/biome_repo_structure.PNG" width="600" />
