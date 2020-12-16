@@ -1,3 +1,11 @@
+"""
+This module contains the function for running K-nearest neighbors
+
+It conatins the following method:
+knn(x_train, y_train) - takes in training data and returns model
+fitted to the K-nearest nieghbors algorithm
+"""
+
 from sklearn.decomposition import PCA
 from sklearn.neighbors import KNeighborsClassifier
 
