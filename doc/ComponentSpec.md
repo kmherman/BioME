@@ -26,11 +26,7 @@ Component organization and interaction is relatively simple in BioME. With the e
     * Input: Models trained by model fitting components, test set, list of models to test
     * Output: Trained models ordered by test accuracy, best-performing model that can be used to make a future prediction
     * Interactions: This component evaluates the accuracy of the models trained by the model fitting components and ranks them by accuracy score. It selects the most accurate model based on these values, and returns a list of the models tested and their respective accuracy scores and the best-performing model.
-5. ### Feature analysis
-    * <ins> Function:</ins> Provides reseachers with an analysis on feature importance. This gives insight into which bacteria are more indicative of a disease or disease subtype.
-    * Input: Combined train and test data set.
-    * Output: Visual and quantitative output indicating relative importance of specific bacteria in predicting that given disease.
-    * Interactions: This optional component can accepts processed test and training data sets from the pre-processor component. It perfroms feature analysis and returns a report on feature importance to the user.
+
 
 <p><img src="flowChart.PNG" height="650" width="1000" /></p>
 
@@ -46,14 +42,7 @@ The working mechanism of the specified components will be exemplified through th
     * **Goal:** Select a classification model to utilize on data intended to better understand difference in features (bacteria) and diseases from samples in various environments.
     * This tool will serve as a screening to determine which algorithms classify their data most accurately. They can use this as a starting point to further develop an algorithm in R or another software that is more comfortable to them. Like in use case 1, the model produced can also be used directly to predict a label or disease classification for new samples that have been collected. The ecologist can then use these predictions to better understand environmental factors that may contribute to these diseases.
 
-# Preliminary Plan
-A list of tasks in priority order.
-* Write function to randomly split data into training and test sets.
-* Implement machine learning algorithms using sci-kit learn or PyTorch.
-* Write unittests for code (continuously).
-* Add easy to use interface that allows user to select model for use (they can input data point and it'll return a predicted label)
-* Add in feature extraction component with a visualization tool.
-* Add feature thatprovides information on misclassifications from test data on model (ie. Which category is most frequently misclassified? Are there more false positive or false negatives?).
+
 
 ```python
 
