@@ -39,7 +39,7 @@ class TestDtree(unittest.TestCase):
         """
         does it catch the exceptions that x_train is not np array?
         """
-        edge1_x_train = TestDtree.x_train
+        edge1_x_train = TestDtree.x_train.tolist()
         with self.assertRaises(TypeError):
             biome.decision_tree(edge1_x_train, TestDtree.y_train)
 
@@ -47,7 +47,7 @@ class TestDtree(unittest.TestCase):
         """
         does it catch the exceptions that y_train is not np array?
         """
-        edge2_y_train = TestDtree.y_train
+        edge2_y_train = TestDtree.y_train.tolist()
         with self.assertRaises(TypeError):
             biome.decision_tree(TestDtree.x_train, edge2_y_train)
 
