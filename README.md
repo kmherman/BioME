@@ -33,6 +33,14 @@ $ cd Desktop
 $ git clone https://github.com/kmherman/BioME.git
 $ cd BioME
 ```
+>Note: If the above worked fine then you don't need this next bit of code and you can skip down to Step 3. If you the install_requires in the setup.py file isn't install the needed packages, please use this command to install the packages prior to setting up BioME:
+```
+$ conda install numpy, pytorch, pandas, scikit-learn
+$ cd Desktop
+$ git clone https://github.com/kmherman/BioME.git
+$ cd BioME
+```
+
 Now take a look on your desktop screen. You'll now see the BioME file!
 #### Step 3: Finish the install.
 Now we just need to run the "setup .py" and you are good to go!
